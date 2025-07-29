@@ -55,12 +55,52 @@
         }
 
         .bird-card {
-            background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(52, 73, 94, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .bird-card:nth-child(1) {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.8), rgba(255, 218, 185, 0.8));
+        }
+
+        .bird-card:nth-child(2) {
+            background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(176, 224, 230, 0.8));
+        }
+
+        .bird-card:nth-child(3) {
+            background: linear-gradient(135deg, rgba(221, 160, 221, 0.8), rgba(238, 130, 238, 0.8));
+        }
+
+        .bird-card:nth-child(4) {
+            background: linear-gradient(135deg, rgba(144, 238, 144, 0.8), rgba(152, 251, 152, 0.8));
+        }
+
+        .bird-card:nth-child(5) {
+            background: linear-gradient(135deg, rgba(255, 255, 224, 0.8), rgba(255, 250, 205, 0.8));
+        }
+
+        .bird-card:nth-child(6) {
+            background: linear-gradient(135deg, rgba(255, 160, 122, 0.8), rgba(255, 218, 185, 0.8));
+        }
+
+        .bird-card:nth-child(7) {
+            background: linear-gradient(135deg, rgba(175, 238, 238, 0.8), rgba(224, 255, 255, 0.8));
+        }
+
+        .bird-card:nth-child(8) {
+            background: linear-gradient(135deg, rgba(255, 192, 203, 0.8), rgba(255, 182, 193, 0.8));
+        }
+
+        .bird-card:nth-child(9) {
+            background: linear-gradient(135deg, rgba(216, 191, 216, 0.8), rgba(221, 160, 221, 0.8));
+        }
+
+        .bird-card:nth-child(10) {
+            background: linear-gradient(135deg, rgba(240, 248, 255, 0.8), rgba(230, 230, 250, 0.8));
         }
 
         .bird-card:hover {
@@ -71,15 +111,26 @@
         .bird-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(45deg, #a8e6cf, #dcedc8);
             border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(52, 73, 94, 0.1);
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
-            color: #2c3e50;
-            font-size: 3em;
-            border: 2px solid rgba(52, 73, 94, 0.1);
+            background: #f8f9fa;
+        }
+
+        .bird-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .bird-card:hover .bird-image img {
+            transform: scale(1.05);
         }
 
         .bird-name {
@@ -127,6 +178,117 @@
         .bird-link:hover {
             background: linear-gradient(45deg, #0984e3, #74b9ff);
             transform: scale(1.05);
+        }
+
+        .view-bird-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #e17055, #fdcb6e);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .view-bird-btn:hover {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            transform: scale(1.05);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 1001;
+        }
+
+        .close-btn:hover {
+            color: #e74c3c;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .modal-title {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 1.4em;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 15px;
+            }
         }
 
         .video-section {
@@ -180,7 +342,9 @@
 
         <div class="birds-grid">
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/133940901/480" alt="White-browed Bulbul">
+                </div>
                 <div class="bird-name">White-browed Bulbul</div>
                 <div class="bird-scientific">Pycnonotus luteolus</div>
                 <div class="bird-info">
@@ -191,11 +355,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">P. luteolus</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/White-browed_bulbul" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/White-browed_bulbul" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Cinereous_tit_%28Parus_cinereus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Cinereous_tit_%28Parus_cinereus%29_Photograph_by_Shantanu_Kuveskar.jpg" alt="Cinereous Tit">
+                </div>
                 <div class="bird-name">Cinereous Tit</div>
                 <div class="bird-scientific">Lophophanes dichrous</div>
                 <div class="bird-info">
@@ -206,11 +375,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">L. dichrous</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Cinereous_tit" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Cinereous_tit" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Indian_white-eye_%28Zosterops_palpebrosus_egregius%29.jpg/500px-Indian_white-eye_%28Zosterops_palpebrosus_egregius%29.jpg" alt="Indian White-eye">
+                </div>
                 <div class="bird-name">Indian White-eye</div>
                 <div class="bird-scientific">Zosterops palpebrosus</div>
                 <div class="bird-info">
@@ -221,11 +395,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">Z. palpebrosus</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Indian_white-eye" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Indian_white-eye" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Tickell%27s_Blue_Flycatcher%2C_Rangantithu%2C_Karnataka%2C_India.jpg/500px-Tickell%27s_Blue_Flycatcher%2C_Rangantithu%2C_Karnataka%2C_India.jpg" alt="Tickell's Blue Flycatcher">
+                </div>
                 <div class="bird-name">Tickell's Blue Flycatcher</div>
                 <div class="bird-scientific">Cyornis tickelliae</div>
                 <div class="bird-info">
@@ -236,11 +415,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">C. tickelliae</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Tickell%27s_blue_flycatcher" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Tickell%27s_blue_flycatcher" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Jerdon%27s_Leafbird.jpg/500px-Jerdon%27s_Leafbird.jpg" alt="Jerdon's Leafbird">
+                </div>
                 <div class="bird-name">Jerdon's Leafbird</div>
                 <div class="bird-scientific">Chloropsis jerdoni</div>
                 <div class="bird-info">
@@ -251,11 +435,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">C. jerdoni</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Jerdon%27s_leafbird" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Jerdon%27s_leafbird" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Oriental_magpie-robin_%28Copsychus_saularis_ceylonensis%29_male.jpg/500px-Oriental_magpie-robin_%28Copsychus_saularis_ceylonensis%29_male.jpg" alt="Oriental Magpie-Robin">
+                </div>
                 <div class="bird-name">Oriental Magpie-Robin</div>
                 <div class="bird-scientific">Copsychus saularis</div>
                 <div class="bird-info">
@@ -266,11 +455,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">C. saularis</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Oriental_magpie-robin" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Oriental_magpie-robin" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Red-vented_bulbul_-_Jamnagar_2023-11-13.jpg/500px-Red-vented_bulbul_-_Jamnagar_2023-11-13.jpg" alt="Red-vented Bulbul">
+                </div>
                 <div class="bird-name">Red-vented Bulbul</div>
                 <div class="bird-scientific">Pycnonotus cafer</div>
                 <div class="bird-info">
@@ -281,11 +475,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">P. cafer</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Red-vented_bulbul" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Red-vented_bulbul" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Red-whiskered_bulbul_-_Pycnonotous_jocosus.png/500px-Red-whiskered_bulbul_-_Pycnonotous_jocosus.png" alt="Red-whiskered Bulbul">
+                </div>
                 <div class="bird-name">Red-whiskered Bulbul</div>
                 <div class="bird-scientific">Pycnonotus jocosus</div>
                 <div class="bird-info">
@@ -296,11 +495,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">P. jocosus</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Red-whiskered_bulbul" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Red-whiskered_bulbul" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tawny_bellied_warbler_2_by_David_Raju_%28cropped%29.jpg/500px-Tawny_bellied_warbler_2_by_David_Raju_%28cropped%29.jpg" alt="Tawny-bellied Babbler">
+                </div>
                 <div class="bird-name">Tawny-bellied Babbler</div>
                 <div class="bird-scientific">Dumetia hyperythra</div>
                 <div class="bird-info">
@@ -311,11 +515,16 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">D. hyperythra</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Tawny-bellied_babbler" class="bird-link" target="_blank">Learn More</a>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Tawny-bellied_babbler" class="bird-link" target="_blank">Learn More</a>
+                    <a href="#" class="view-bird-btn" onclick="openVideoModal('https://www.youtube.com/watch?v=TrMHM_Wfi0A', 'Tawny-bellied Babbler')">View Bird</a>
+                </div>
             </div>
 
             <div class="bird-card">
-                <div class="bird-image">🐦</div>
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Lonchura_punctulata_%28Nagarhole%2C_2004%29.jpg/500px-Lonchura_punctulata_%28Nagarhole%2C_2004%29.jpg" alt="Scaly-breasted Munia">
+                </div>
                 <div class="bird-name">Scaly-breasted Munia</div>
                 <div class="bird-scientific">Lonchura punctulata</div>
                 <div class="bird-info">
@@ -326,14 +535,75 @@
                     <span class="info-label">Species:</span>
                     <span class="info-value">L. punctulata</span>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/Scaly-breasted_munia" class="bird-link" target="_blank">Learn More</a>
-            </div>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Scaly-breasted_munia" class="bird-link" target="_blank">Learn More</a>
+                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+                </div>
         </div>
+
+
+    </div>
 
         <div class="video-section">
             <h2 style="margin-bottom: 20px; color: #2c3e50;">🎥 Watch Our Birds in Action!</h2>
-            <a href="#" class="video-link">Click here for the video</a>
+            <a href="https://youtu.be/TrMHM_Wfi0A" class="video-link">Click here for the video</a>
+        </div>
+		
+		
+    <!-- Modal for YouTube Video -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+            <h3 class="modal-title" id="modalTitle">Bird Video</h3>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
+
+    <script>
+        function openVideoModal(videoId, birdName) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoFrame');
+            const title = document.getElementById('modalTitle');
+            
+            // Set the title
+            title.textContent = birdName + ' - Video';
+            
+            // Set the YouTube embed URL
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            
+            // Show the modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoFrame');
+            
+            // Hide the modal
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+            
+            // Stop the video by clearing the src
+            iframe.src = '';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('videoModal');
+            if (event.target === modal) {
+                closeVideoModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+    </script>
 </body>
 </html>
