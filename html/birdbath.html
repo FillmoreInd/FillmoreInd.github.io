@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Bird Bath @ 865</title>
+    <script>
+        function openVideoModal(videoUrl, videoTitle) {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            const titleElement = document.getElementById('videoTitle');
+            videoFrame.src = videoUrl; // Set iframe src to YouTube embed URL
+            if (titleElement) {
+                titleElement.textContent = videoTitle; // Set modal title
+            }
+            modal.style.display = 'block'; // Show modal
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = ''; // Clear iframe src to stop video
+            modal.style.display = 'none'; // Hide modal
+        }
+
+        // Optional: Ensure DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Any initialization code if needed
+        });
+    </script>
+	
     <style>
         * {
             margin: 0;
@@ -357,7 +382,7 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/White-browed_bulbul" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/ETGVbH_ejas', 'White-browed Bulbul')">View Bird</a>		
                 </div>
             </div>
 
@@ -377,7 +402,8 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Cinereous_tit" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/MtLgK_hwMmU', 'Bird-Link')">View Bird</a>		
+					
                 </div>
             </div>
 
@@ -397,7 +423,8 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Indian_white-eye" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/pP8vPvi4b7M', 'Bird-Link')">View Bird</a>		
+					
                 </div>
             </div>
 
@@ -417,7 +444,8 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Tickell%27s_blue_flycatcher" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/ulPahKNcnk8', 'Bird-Link')">View Bird</a>		
+
                 </div>
             </div>
 
@@ -437,7 +465,7 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Jerdon%27s_leafbird" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/7YLZt1ky98o', 'Bird-Link')">View Bird</a>
                 </div>
             </div>
 
@@ -457,7 +485,7 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Oriental_magpie-robin" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/1--LhDfwDIU', 'Bird-Link')">View Bird</a>
                 </div>
             </div>
 
@@ -477,7 +505,7 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Red-vented_bulbul" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/B_ywl_hzhgE', 'Bird-Link')">View Bird</a>
                 </div>
             </div>
 
@@ -497,7 +525,7 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Red-whiskered_bulbul" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/pgRnsLMMI6U', 'Bird-Link')">View Bird</a>
                 </div>
             </div>
 
@@ -517,8 +545,7 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Tawny-bellied_babbler" class="bird-link" target="_blank">Learn More</a>
-                    <a href="#" class="view-bird-btn" onclick="openVideoModal('https://www.youtube.com/watch?v=TrMHM_Wfi0A', 'Tawny-bellied Babbler')">View Bird</a>
-                </div>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/uQ3cnWlxo00', 'Bird-Link')">View Bird</a>                </div>
             </div>
 
             <div class="bird-card">
@@ -537,11 +564,29 @@
                 </div>
                 <div class="button-container">
                     <a href="https://en.wikipedia.org/wiki/Scaly-breasted_munia" class="bird-link" target="_blank">Learn More</a>
-                    <a href="https://www.youtube.com/watch?v=TrMHM_Wfi0A" class="view-bird-btn" target="_blank">View Bird</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/TrMHM_Wfi0A', 'Bird-Link')">View Bird</a>
                 </div>
         </div>
 
-
+            <div class="bird-card">
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg/500px-Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg" alt="Indian Jungle Crow">
+                </div>
+                <div class="bird-name">Indian Jungle Crow</div>
+                <div class="bird-scientific">Lonchura punctulata</div>
+                <div class="bird-info">
+                    <span class="info-label">Genus:</span>
+                    <span class="info-value">Corvus</span>
+                </div>
+                <div class="bird-info">
+                    <span class="info-label">Species:</span>
+                    <span class="info-value">C. culminatus</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Indian_jungle_crow" class="bird-link" target="_blank">Learn More</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/TrMHM_Wfi0A', 'Bird-Link')">View Bird</a>
+                </div>
+        </div>
     </div>
 
         <div class="video-section">
@@ -561,49 +606,5 @@
         </div>
     </div>
 
-    <script>
-        function openVideoModal(videoId, birdName) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoFrame');
-            const title = document.getElementById('modalTitle');
-            
-            // Set the title
-            title.textContent = birdName + ' - Video';
-            
-            // Set the YouTube embed URL
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-            
-            // Show the modal
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoFrame');
-            
-            // Hide the modal
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
-            
-            // Stop the video by clearing the src
-            iframe.src = '';
-        }
-
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('videoModal');
-            if (event.target === modal) {
-                closeVideoModal();
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeVideoModal();
-            }
-        });
-    </script>
-</body>
+   </body>
 </html>
