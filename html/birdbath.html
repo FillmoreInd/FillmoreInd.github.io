@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bird Bath @ 865</title>
-    <script>
-        function openVideoModal(videoUrl, videoTitle) {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   The Bird Bath @ 865
+  </title>
+  <script>
+   function openVideoModal(videoUrl, videoTitle) {
             const modal = document.getElementById('videoModal');
             const videoFrame = document.getElementById('videoFrame');
-            const titleElement = document.getElementById('modalTitle');
+            const titleElement = document.getElementById('videoTitle');
             videoFrame.src = videoUrl; // Set iframe src to YouTube embed URL
             if (titleElement) {
                 titleElement.textContent = videoTitle; // Set modal title
@@ -27,10 +29,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Any initialization code if needed
         });
-    </script>
-	
-	    <style>
-        body {
+  </script>
+  <style>
+   body {
             margin: 0;
             padding: 0;
             background-image: url('https://fillmoreind.github.io/img/leafy-background.png'); /* Replace with actual path */
@@ -54,14 +55,13 @@
             text-align: center;
         }
 
-        .subtitle2 {
-            font-size: 0.8em;
+        .subtitle {
+            font-size: 1rem;
             color: #333;
         }
-    </style>
-	
-    <style>
-        * {
+  </style>
+  <style>
+   * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -98,7 +98,7 @@
         }
 
         .subtitle {
-            font-size: 1em;
+            font-size: 1.2em;
             color: #7f8c8d;
             font-style: italic;
         }
@@ -238,7 +238,7 @@
 
         .view-bird-btn {
             display: inline-block;
-            background: linear-gradient(45deg, #2e7d32, #66bb6a);
+            background: linear-gradient(45deg, #e17055, #fdcb6e);
             color: white;
             padding: 8px 16px;
             text-decoration: none;
@@ -387,256 +387,529 @@
                 padding: 15px;
             }
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🐦 The Bird Bath @ 865 🐦</h1>
-            <p class="subtitle">These are some of the birds that visit my Bird Bath.<br> Note: The <b>"View Bird @ Site"</b> videos are captured at site, not the display images on this page.</p><br>
-            <p class="subtitle2">The quality of the bird videos are sub-par since they were captured using a CCTV camera pointed to the bird bath.</p>
-        </header>
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1>
+     🐦 The Bird Bath @ 865 🐦
+    </h1>
+    <p class="subtitle">
+     These are some of the birds that visit my Bird Bath.
+     <br/>
+     Note: The "View Bird" videos are captured at site, not the display images on this page.
+    </p>
+   </header>
+   <div class="birds-grid">
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="White-browed Bulbul" src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/133940901/480"/>
+     </div>
+     <div class="bird-name">
+      White-browed Bulbul
+     </div>
+     <div class="bird-scientific">
+      Pycnonotus luteolus
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Pycnonotus
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       P. luteolus
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/White-browed_bulbul" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/ETGVbH_ejas', 'White-browed Bulbul')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Cinereous Tit" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Cinereous_tit_%28Parus_cinereus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Cinereous_tit_%28Parus_cinereus%29_Photograph_by_Shantanu_Kuveskar.jpg"/>
+     </div>
+     <div class="bird-name">
+      Cinereous Tit
+     </div>
+     <div class="bird-scientific">
+      Lophophanes dichrous
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Lophophanes
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       L. dichrous
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Cinereous_tit" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/MtLgK_hwMmU', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Indian White-eye" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Indian_white-eye_%28Zosterops_palpebrosus_egregius%29.jpg/500px-Indian_white-eye_%28Zosterops_palpebrosus_egregius%29.jpg"/>
+     </div>
+     <div class="bird-name">
+      Indian White-eye
+     </div>
+     <div class="bird-scientific">
+      Zosterops palpebrosus
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Zosterops
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       Z. palpebrosus
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Indian_white-eye" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/pP8vPvi4b7M', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Tickell's Blue Flycatcher" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Tickell%27s_Blue_Flycatcher%2C_Rangantithu%2C_Karnataka%2C_India.jpg/500px-Tickell%27s_Blue_Flycatcher%2C_Rangantithu%2C_Karnataka%2C_India.jpg"/>
+     </div>
+     <div class="bird-name">
+      Tickell's Blue Flycatcher
+     </div>
+     <div class="bird-scientific">
+      Cyornis tickelliae
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Cyornis
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       C. tickelliae
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Tickell%27s_blue_flycatcher" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/ulPahKNcnk8', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Jerdon's Leafbird" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Jerdon%27s_Leafbird.jpg/500px-Jerdon%27s_Leafbird.jpg"/>
+     </div>
+     <div class="bird-name">
+      Jerdon's Leafbird
+     </div>
+     <div class="bird-scientific">
+      Chloropsis jerdoni
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Chloropsis
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       C. jerdoni
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Jerdon%27s_leafbird" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/7YLZt1ky98o', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Oriental Magpie-Robin" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Oriental_magpie-robin_%28Copsychus_saularis_ceylonensis%29_male.jpg/500px-Oriental_magpie-robin_%28Copsychus_saularis_ceylonensis%29_male.jpg"/>
+     </div>
+     <div class="bird-name">
+      Oriental Magpie-Robin
+     </div>
+     <div class="bird-scientific">
+      Copsychus saularis
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Copsychus
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       C. saularis
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Oriental_magpie-robin" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/1--LhDfwDIU', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Red-vented Bulbul" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Red-vented_bulbul_-_Jamnagar_2023-11-13.jpg/500px-Red-vented_bulbul_-_Jamnagar_2023-11-13.jpg"/>
+     </div>
+     <div class="bird-name">
+      Red-vented Bulbul
+     </div>
+     <div class="bird-scientific">
+      Pycnonotus cafer
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Pycnonotus
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       P. cafer
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Red-vented_bulbul" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/B_ywl_hzhgE', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Red-whiskered Bulbul" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Red-whiskered_bulbul_-_Pycnonotous_jocosus.png/500px-Red-whiskered_bulbul_-_Pycnonotous_jocosus.png"/>
+     </div>
+     <div class="bird-name">
+      Red-whiskered Bulbul
+     </div>
+     <div class="bird-scientific">
+      Pycnonotus jocosus
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Pycnonotus
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       P. jocosus
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Red-whiskered_bulbul" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/pgRnsLMMI6U', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Tawny-bellied Babbler" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tawny_bellied_warbler_2_by_David_Raju_%28cropped%29.jpg/500px-Tawny_bellied_warbler_2_by_David_Raju_%28cropped%29.jpg"/>
+     </div>
+     <div class="bird-name">
+      Tawny-bellied Babbler
+     </div>
+     <div class="bird-scientific">
+      Dumetia hyperythra
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Dumetia
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       D. hyperythra
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Tawny-bellied_babbler" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/uQ3cnWlxo00', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Scaly-breasted Munia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Lonchura_punctulata_%28Nagarhole%2C_2004%29.jpg/500px-Lonchura_punctulata_%28Nagarhole%2C_2004%29.jpg"/>
+     </div>
+     <div class="bird-name">
+      Scaly-breasted Munia
+     </div>
+     <div class="bird-scientific">
+      Lonchura punctulata
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Lonchura
+      </span>
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       L. punctulata
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Scaly-breasted_munia" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/fZLxm6oYhOI', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+    </div>
+	
+<!-- BIRD COL   -->
+		 
+    <div class="bird-card">
+     <div class="bird-image">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/White-bellied_blue_flycatcher_OMH.jpg/500px-White-bellied_blue_flycatcher_OMH.jpg" alt="White Bellied Blue Flycatcher">
+     </div>
 
-        <div class="birds-grid">
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/133940901/480" alt="White-browed Bulbul">
-                </div>
-                <div class="bird-name">White-browed Bulbul</div>
-                <div class="bird-scientific">Pycnonotus luteolus</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Pycnonotus</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">P. luteolus</span>
-                </div>
+
+  
+     <div class="bird-name">
+     White Bellied Blue Flycatcher
+     </div>
+     <div class="bird-scientific">
+      Cyornis pallidipes
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Cyornis
+      </span>
+     </div>
+	 
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       C. pallidipes
+      </span>
+     </div>
                 <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/White-browed_bulbul" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/ETGVbH_ejas', 'White Browed Bulbul')">View Bird @ Site</a>		
+                    <a href="https://en.wikipedia.org/wiki/White-bellied_blue_flycatcher" class="bird-link" target="_blank">Learn More</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/qMyO3LMlty8', 'White Bellied Blue Flycatcher')">View Bird @ Site</a>
                 </div>
-            </div>
+	 
+     </div>
+  
+     <!-- End Col -->
 
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Cinereous_tit_%28Parus_cinereus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Cinereous_tit_%28Parus_cinereus%29_Photograph_by_Shantanu_Kuveskar.jpg" alt="Cinereous Tit">
-                </div>
-                <div class="bird-name">Cinereous Tit</div>
-                <div class="bird-scientific">Lophophanes dichrous</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Lophophanes</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">L. dichrous</span>
-                </div>
+
+<!-- BIRD COL   -->
+		 
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Greater Coucal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Greater_coucal_crop.jpg/500px-Greater_coucal_crop.jpg"/>
+     </div>
+
+
+  
+     <div class="bird-name">
+      Greater Coucal
+     </div>
+     <div class="bird-scientific">
+      Centropus sinensis
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Centropus
+      </span>
+     </div>
+	 
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       C. sinensis
+      </span>
+     </div>
                 <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Cinereous_tit" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/MtLgK_hwMmU', 'Cinereous Tit')">View Bird @ Site</a>		
-					
+                    <a href="https://en.wikipedia.org/wiki/Greater_coucal" class="bird-link" target="_blank">Learn More</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/tWa-oGrc8KM', 'White Bellied Blue Flycatcher')">View Bird @ Site</a>
                 </div>
-            </div>
 
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Indian_white-eye_%28Zosterops_palpebrosus_egregius%29.jpg/500px-Indian_white-eye_%28Zosterops_palpebrosus_egregius%29.jpg" alt="Indian White-eye">
-                </div>
-                <div class="bird-name">Indian White-eye</div>
-                <div class="bird-scientific">Zosterops palpebrosus</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Zosterops</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">Z. palpebrosus</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Indian_white-eye" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/pP8vPvi4b7M', 'Indian White-eye')">View Bird @ Site</a>		
-					
-                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Tickell%27s_Blue_Flycatcher%2C_Rangantithu%2C_Karnataka%2C_India.jpg/500px-Tickell%27s_Blue_Flycatcher%2C_Rangantithu%2C_Karnataka%2C_India.jpg" alt="Tickell's Blue Flycatcher">
-                </div>
-                <div class="bird-name">Tickell's Blue Flycatcher</div>
-                <div class="bird-scientific">Cyornis tickelliae</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Cyornis</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">C. tickelliae</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Tickell%27s_blue_flycatcher" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/ulPahKNcnk8', 'Tickells Blue Flycatcher')">View Bird @ Site</a>		
-
-                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Jerdon%27s_Leafbird.jpg/500px-Jerdon%27s_Leafbird.jpg" alt="Jerdon's Leafbird">
-                </div>
-                <div class="bird-name">Jerdon's Leafbird</div>
-                <div class="bird-scientific">Chloropsis jerdoni</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Chloropsis</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">C. jerdoni</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Jerdon%27s_leafbird" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/7YLZt1ky98o', 'Jerdons Leafbird')">View Bird @ Site</a>
-                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Oriental_magpie-robin_%28Copsychus_saularis_ceylonensis%29_male.jpg/500px-Oriental_magpie-robin_%28Copsychus_saularis_ceylonensis%29_male.jpg" alt="Oriental Magpie-Robin">
-                </div>
-                <div class="bird-name">Oriental Magpie-Robin</div>
-                <div class="bird-scientific">Copsychus saularis</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Copsychus</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">C. saularis</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Oriental_magpie-robin" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/1--LhDfwDIU', 'Oriental Magpie-Robin')">View Bird @ Site</a>
-                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Red-vented_bulbul_-_Jamnagar_2023-11-13.jpg/500px-Red-vented_bulbul_-_Jamnagar_2023-11-13.jpg" alt="Red-vented Bulbul">
-                </div>
-                <div class="bird-name">Red-vented Bulbul</div>
-                <div class="bird-scientific">Pycnonotus cafer</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Pycnonotus</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">P. cafer</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Red-vented_bulbul" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/B_ywl_hzhgE', 'Red-vented Bulbul')">View Bird @ Site</a>
-                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Red-whiskered_bulbul_-_Pycnonotous_jocosus.png/500px-Red-whiskered_bulbul_-_Pycnonotous_jocosus.png" alt="Red-whiskered Bulbul">
-                </div>
-                <div class="bird-name">Red-whiskered Bulbul</div>
-                <div class="bird-scientific">Pycnonotus jocosus</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Pycnonotus</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">P. jocosus</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Red-whiskered_bulbul" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/pgRnsLMMI6U', 'Red-whiskered Bulbul')">View Bird @ Site</a>
-                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tawny_bellied_warbler_2_by_David_Raju_%28cropped%29.jpg/500px-Tawny_bellied_warbler_2_by_David_Raju_%28cropped%29.jpg" alt="Tawny-bellied Babbler">
-                </div>
-                <div class="bird-name">Tawny-bellied Babbler</div>
-                <div class="bird-scientific">Dumetia hyperythra</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Dumetia</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">D. hyperythra</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Tawny-bellied_babbler" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/uQ3cnWlxo00', 'Tawny-bellied Babbler')">View Bird @ Site</a>                </div>
-            </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Lonchura_punctulata_%28Nagarhole%2C_2004%29.jpg/500px-Lonchura_punctulata_%28Nagarhole%2C_2004%29.jpg" alt="Scaly-breasted Munia">
-                </div>
-                <div class="bird-name">Scaly-breasted Munia</div>
-                <div class="bird-scientific">Lonchura punctulata</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Lonchura</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">L. punctulata</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Scaly-breasted_munia" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/fZLxm6oYhOI', 'Scaly-breasted Munia')">View Bird @ Site</a>
-                </div>
-        </div>
-
-            <div class="bird-card">
-                <div class="bird-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg/500px-Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg" alt="Indian Jungle Crow">
-                </div>
-                <div class="bird-name">Indian Jungle Crow</div>
-                <div class="bird-scientific">Lonchura punctulata</div>
-                <div class="bird-info">
-                    <span class="info-label">Genus:</span>
-                    <span class="info-value">Corvus</span>
-                </div>
-                <div class="bird-info">
-                    <span class="info-label">Species:</span>
-                    <span class="info-value">C. culminatus</span>
-                </div>
-                <div class="button-container">
-                    <a href="https://en.wikipedia.org/wiki/Indian_jungle_crow" class="bird-link" target="_blank">Learn More</a>
-					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/ygd5dIqHYjo', 'Indian Jungle Crow')">View Bird @ Site</a>
-                </div>
-        </div>
     </div>
 
-        <div class="video-section">
-            <h2 style="margin-bottom: 20px; color: #2c3e50;">🎥 The groups of birds !</h2>
-            <a href="https://youtu.be/TrMHM_Wfi0A" class="video-link">Click here for the video</a>
-        </div>
-		
-		
-    <!-- Modal for YouTube Video -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
-            <h3 class="modal-title" id="modalTitle">Bird Video</h3>
-            <div class="video-container">
-                <iframe id="videoFrame" src="" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
+   <!-- End Row -->
+   
+  
+<!-- BIRD COL   -->
+		 
+    <div class="bird-card">
+     <div class="bird-image">
+      <img alt="Indian Jungle Crow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg/500px-Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg"/>
+     </div>
 
-   </body>
+
+  
+     <div class="bird-name">
+      Indian Jungle Crow
+     </div>
+     <div class="bird-scientific">
+      Corvus culminatus
+     </div>
+     <div class="bird-info">
+      <span class="info-label">
+       Genus:
+      </span>
+      <span class="info-value">
+       Corvus
+      </span>
+     </div>
+	 
+     <div class="bird-info">
+      <span class="info-label">
+       Species:
+      </span>
+      <span class="info-value">
+       C. culminatus
+      </span>
+     </div>
+     <div class="button-container">
+      <a class="bird-link" href="https://en.wikipedia.org/wiki/Indian_jungle_crow" target="_blank">
+       Learn More
+      </a>
+      <a class="view-bird-btn" href="#" onclick="openVideoModal('https://youtube.com/embed/ygd5dIqHYjo', 'Bird-Link')">
+       View Bird
+      </a>
+     </div>
+
+
+	 
+    </div>
+  	 
+   <!-- End Row --> 
+   </div>
+   
+  <!-- FOOTER SECTION  -->
+	 
+   <div class="video-section">
+    <h2 style="margin-bottom: 20px; color: #2c3e50;">
+     🎥 The groups of birds !
+    </h2>
+    <a class="video-link" href="https://youtu.be/TrMHM_Wfi0A">
+     Click here for the video
+    </a>
+   </div>
+   <!-- Modal for YouTube Video -->
+   <div class="modal" id="videoModal">
+    <div class="modal-content">
+     <span class="close-btn" onclick="closeVideoModal()">
+      ×
+     </span>
+     <h3 class="modal-title" id="modalTitle">
+      Bird Video
+     </h3>
+     <div class="video-container">
+      <iframe allowfullscreen="" id="videoFrame" src="">
+      </iframe>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
