@@ -59,15 +59,43 @@
   .meta .value{ color:#f1f5f9; }
 
   .actions{ display:flex; gap:10px; margin:14px 2px 4px; }
-  .btn{
-    flex:1; display:inline-flex; align-items:center; justify-content:center; padding:10px 12px; border-radius:12px;
-    background:var(--btn); color:#e2e8f0; text-decoration:none; font-weight:700; border:1px solid rgba(255,255,255,.08);
-    box-shadow:0 6px 18px rgba(0,0,0,.35), inset 0 -6px 12px rgba(255,255,255,.04);
-    transition: transform .15s ease, box-shadow .2s ease, background .2s ease; will-change:transform;
-  }
-  .btn:hover{ transform: translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.45), inset 0 -6px 12px rgba(255,255,255,.06); }
-  .btn.secondary{ background:rgba(255,255,255,.06); }
-  .btn span{ white-space:nowrap; }
+	.btn {
+	  flex: 1;
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  padding: 10px 12px;
+	  border-radius: 12px;
+	  background: #4da3ff;  /* light blue */
+	  color: #ffffff;       /* white text */
+	  text-decoration: none;
+	  font-weight: 700;
+	  border: 1px solid rgba(255, 255, 255, .08);
+	  box-shadow: 0 6px 18px rgba(0, 0, 0, .35),
+				  inset 0 -6px 12px rgba(255, 255, 255, .04);
+	  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+	  will-change: transform;
+	}
+	.btn:hover {
+	  transform: translateY(-2px);
+	  box-shadow: 0 10px 24px rgba(0, 0, 0, .45),
+				  inset 0 -6px 12px rgba(255, 255, 255, .06);
+	}
+
+	/* Secondary button - now green */
+	.btn.secondary {
+	  background: #28a745; /* solid green */
+	  color: #ffffff;      /* white text */
+	}
+
+	/* Optional: slightly darker green on hover for better feedback */
+	.btn.secondary:hover {
+	  background: #218838;
+	}
+
+	.btn span {
+	  white-space: nowrap;
+	}
 
   /* Cycle hues automatically */
   .card:nth-child(6n+1){ --hue:205 } .card:nth-child(6n+2){ --hue:275 } .card:nth-child(6n+3){ --hue:145 }
@@ -78,6 +106,7 @@
 <header>
   <h1>Birds photographed @ 865 Holiday Valley</h1>
   <p>Click <em>Learn More</em> to open the bird’s Wikipedia page, or <em>View Bird @ Site</em> to open the Flickr album.</p>
+  
 </header>
 
 <main class="container" id="grid"></main>
