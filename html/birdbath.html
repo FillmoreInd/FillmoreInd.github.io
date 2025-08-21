@@ -119,76 +119,59 @@
             backdrop-filter: blur(10px);
         }
 
-        .bird-card:nth-child(1) {
-            background: linear-gradient(135deg, rgba(255, 182, 193, 0.8), rgba(255, 218, 185, 0.8));
-        }
+:root {
+    --gradient-1: linear-gradient(135deg, rgba(255, 182, 193, 0.8), rgba(255, 218, 185, 0.8));
+    --gradient-2: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(176, 224, 230, 0.8));
+    --gradient-3: linear-gradient(135deg, rgba(221, 160, 221, 0.8), rgba(238, 130, 238, 0.8));
+    --gradient-4: linear-gradient(135deg, rgba(144, 238, 144, 0.8), rgba(152, 251, 152, 0.8));
+    --gradient-5: linear-gradient(135deg, rgba(255, 255, 224, 0.8), rgba(255, 250, 205, 0.8));
+    --gradient-6: linear-gradient(135deg, rgba(255, 160, 122, 0.8), rgba(255, 218, 185, 0.8));
+    --gradient-7: linear-gradient(135deg, rgba(175, 238, 238, 0.8), rgba(224, 255, 255, 0.8));
+    --gradient-8: linear-gradient(135deg, rgba(255, 192, 203, 0.8), rgba(255, 182, 193, 0.8));
+    --gradient-9: linear-gradient(135deg, rgba(216, 191, 216, 0.8), rgba(221, 160, 221, 0.8));
+    --gradient-10: linear-gradient(135deg, rgba(240, 248, 255, 0.8), rgba(230, 230, 250, 0.8));
+}
 
-        .bird-card:nth-child(2) {
-            background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(176, 224, 230, 0.8));
-        }
-
-        .bird-card:nth-child(3) {
-            background: linear-gradient(135deg, rgba(221, 160, 221, 0.8), rgba(238, 130, 238, 0.8));
-        }
-
-        .bird-card:nth-child(4) {
-            background: linear-gradient(135deg, rgba(144, 238, 144, 0.8), rgba(152, 251, 152, 0.8));
-        }
-
-        .bird-card:nth-child(5) {
-            background: linear-gradient(135deg, rgba(255, 255, 224, 0.8), rgba(255, 250, 205, 0.8));
-        }
-
-        .bird-card:nth-child(6) {
-            background: linear-gradient(135deg, rgba(255, 160, 122, 0.8), rgba(255, 218, 185, 0.8));
-        }
-
-        .bird-card:nth-child(7) {
-            background: linear-gradient(135deg, rgba(175, 238, 238, 0.8), rgba(224, 255, 255, 0.8));
-        }
-
-        .bird-card:nth-child(8) {
-            background: linear-gradient(135deg, rgba(255, 192, 203, 0.8), rgba(255, 182, 193, 0.8));
-        }
-
-        .bird-card:nth-child(9) {
-            background: linear-gradient(135deg, rgba(216, 191, 216, 0.8), rgba(221, 160, 221, 0.8));
-        }
-
-        .bird-card:nth-child(10) {
-            background: linear-gradient(135deg, rgba(240, 248, 255, 0.8), rgba(230, 230, 250, 0.8));
-        }
+.bird-card:nth-child(10n+1) { background: var(--gradient-1); }
+.bird-card:nth-child(10n+2) { background: var(--gradient-2); }
+.bird-card:nth-child(10n+3) { background: var(--gradient-3); }
+.bird-card:nth-child(10n+4) { background: var(--gradient-4); }
+.bird-card:nth-child(10n+5) { background: var(--gradient-5); }
+.bird-card:nth-child(10n+6) { background: var(--gradient-6); }
+.bird-card:nth-child(10n+7) { background: var(--gradient-7); }
+.bird-card:nth-child(10n+8) { background: var(--gradient-8); }
+.bird-card:nth-child(10n+9) { background: var(--gradient-9); }
+.bird-card:nth-child(10n+10) { background: var(--gradient-10); }
 
         .bird-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
         }
 
-        .bird-image {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border: 2px solid rgba(52, 73, 94, 0.1);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8f9fa;
-        }
+.bird-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none; /* Remove the border */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none; /* Remove the background to avoid any box-like appearance */
+}
 
-        .bird-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            transition: transform 0.3s ease;
-        }
+	.bird-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain; /* Changed from cover to contain */
+		object-position: center;
+		transition: transform 0.3s ease;
+	}
 
-        .bird-card:hover .bird-image img {
-            transform: scale(1.05);
-        }
-
+	.bird-card:hover .bird-image img {
+		transform: scale(1.05);
+	}
         .bird-name {
             font-size: 1.4em;
             font-weight: bold;
@@ -615,7 +598,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg/500px-Indian_Jungle_Crow_Perching_Back_Mudumalai_Mar21_DSC01350.jpg" alt="Indian Jungle Crow">
                 </div>
                 <div class="bird-name">Indian Jungle Crow</div>
-                <div class="bird-scientific">Lonchura punctulata</div>
+                <div class="bird-scientific">Corvus culminatus</div>
                 <div class="bird-info">
                     <span class="info-label">Genus:</span>
                     <span class="info-value">Corvus</span>
@@ -677,6 +660,34 @@
                 </div>		
         </div>
 <!-- End New Bird -->
+
+<!-- New Bird --> 
+
+            <div class="bird-card">
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Asian_Koel_Female.jpg/500px-Asian_Koel_Female.jpg" alt="Asian Koel Female">
+                </div>
+                <div class="bird-name">Asian Koel - Female </div>
+                <div class="bird-scientific">Eudynamys scolopaceus</div>
+                <div class="bird-info">
+                    <span class="info-label">Genus:</span>
+                    <span class="info-value">Eudynamys</span>
+                </div>
+                <div class="bird-info">
+                    <span class="info-label">Species:</span>
+                    <span class="info-value">E. scolopaceus</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Asian_koel" class="bird-link" target="_blank">Learn More</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/fKmkG8E976k', 'Asian Koel - Female')">View Bird @ Site</a>
+                </div>		
+        </div>
+<!-- End New Bird -->
+
+
+
+
+<!--------------- PAGE FOOTER --------------->
 
     </div>
 
