@@ -30,94 +30,136 @@
     </script>
 	
 	    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('https://fillmoreind.github.io/img/leafy-background.png'); /* Replace with actual path */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            font-family: Arial, sans-serif;
-        }
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white for readability */
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            text-align: center;
-        }
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+}
 
-        .subtitle2 {
-            font-size: 0.8em;
-            color: #333;
-        }
-    </style>
-	
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #2c3e50;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.9), rgba(173, 216, 230, 0.9));
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.header-title {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: red; /* Set text color to red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    animation: slideIn 0.8s ease-out;
+}
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
+.header-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
-        h1 {
-            font-size: 2.5em;
-            color: #34495e;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
+.birdbath-img {
+    width: 200px;
+    max-width: 25%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .subtitle {
-            font-size: 1em;
-            color: #7f8c8d;
-            font-style: italic;
-        }
+.birdbath-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
 
-        .birds-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
+.header-subtitle {
+    font-size: 1.1em;
+    color: #34495e;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1.2s ease-out 0.2s;
+    animation-fill-mode: both;
+}
 
-        .bird-card {
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
+.header-subtitle2 {
+    font-size: 0.95em;
+    color: darkgreen; /* Changed to dark green */
+    font-style: normal;
+    margin-bottom: 0;
+    animation: fadeIn 1.4s ease-out 0.4s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.birds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.bird-card {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
 
 :root {
     --gradient-1: linear-gradient(135deg, rgba(255, 182, 193, 0.8), rgba(255, 218, 185, 0.8));
@@ -143,250 +185,261 @@
 .bird-card:nth-child(10n+9) { background: var(--gradient-9); }
 .bird-card:nth-child(10n+10) { background: var(--gradient-10); }
 
-        .bird-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-        }
+.bird-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
 
 .bird-image {
     width: 100%;
     height: 200px;
     border-radius: 10px;
     margin-bottom: 15px;
-    border: none; /* Remove the border */
+    border: none;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none; /* Remove the background to avoid any box-like appearance */
+    background: none;
 }
 
-	.bird-image img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain; /* Changed from cover to contain */
-		object-position: center;
-		transition: transform 0.3s ease;
-	}
+.bird-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
 
-	.bird-card:hover .bird-image img {
-		transform: scale(1.05);
-	}
-        .bird-name {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            text-align: center;
-        }
+.bird-card:hover .bird-image img {
+    transform: scale(1.05);
+}
 
-        .bird-scientific {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.bird-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-        .bird-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+.bird-scientific {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
-        .info-label {
-            font-weight: bold;
-            color: #34495e;
-        }
+.bird-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 
-        .info-value {
-            color: #7f8c8d;
-        }
+.info-label {
+    font-weight: bold;
+    color: #34495e;
+}
 
-        .bird-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #74b9ff, #0984e3);
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
+.info-value {
+    color: #7f8c8d;
+}
 
-        .bird-link:hover {
-            background: linear-gradient(45deg, #0984e3, #74b9ff);
-            transform: scale(1.05);
-        }
+.bird-link {
+    display: inline-block;
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
 
-        .view-bird-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #2e7d32, #66bb6a);
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
+.bird-link:hover {
+    background: linear-gradient(45deg, #0984e3, #74b9ff);
+    transform: scale(1.05);
+}
 
-        .view-bird-btn:hover {
-            background: linear-gradient(45deg, #fdcb6e, #e17055);
-            transform: scale(1.05);
-        }
+.view-bird-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 
-        .button-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
+.view-bird-btn:hover {
+    background: linear-gradient(45deg, #fdcb6e, #e17055);
+    transform: scale(1.05);
+}
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-        }
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
 
-        .modal-content {
-            position: relative;
-            background-color: #fff;
-            margin: 5% auto;
-            padding: 20px;
-            border-radius: 15px;
-            width: 80%;
-            max-width: 800px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: modalSlideIn 0.3s ease-out;
-        }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
 
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
 
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            z-index: 1001;
-        }
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
-        .close-btn:hover {
-            color: #e74c3c;
-        }
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
 
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            overflow: hidden;
-            border-radius: 10px;
-        }
+.close-btn:hover {
+    color: #e74c3c;
+}
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-        .modal-title {
-            margin-bottom: 20px;
-            color: #2c3e50;
-            font-size: 1.4em;
-            text-align: center;
-        }
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
 
-        @media (max-width: 768px) {
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-                padding: 15px;
-            }
-        }
+.modal-title {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.4em;
+    text-align: center;
+}
 
-        .video-section {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
+.video-section {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
 
-        .video-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #00b894, #00cec9);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
+.video-link {
+    display: inline-block;
+    background: linear-gradient(45deg, #00b894, #00cec9);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-        .video-link:hover {
-            background: linear-gradient(45deg, #00cec9, #00b894);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
+.video-link:hover {
+    background: linear-gradient(45deg, #00cec9, #00b894);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
 
-        @media (max-width: 768px) {
-            .birds-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-        }
+@media (max-width: 768px) {
+    .birds-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-title {
+        font-size: 2em;
+    }
+
+    .birdbath-img {
+        width: 150px;
+        max-width: 40%;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+}
     </style>
+
+
 </head>
 <body>
     <div class="container">
-<header>
-    <h1>🐦 The Bird Bath @ 865 🐦</h1>
-    <div style="text-align: center;">
-        <img src="birdbath.png" alt="Bird Bath" style="width: 25%; height: 25%;">
+
+<header class="header">
+    <h1 class="header-title">The Bird Bath @ 865</h1>
+    <div class="header-image">
+        <img src="birdbath.png" alt="Bird Bath" class="birdbath-img">
     </div>
-    <p class="subtitle">
+    <p class="header-subtitle">
         These are some of the birds that visit my Bird Bath.<br>
         Note: The <b>"View Bird @ Site"</b> videos are captured at site, not the display images on this page.
-    </p><br>
-    <p class="subtitle2">
-        The quality of the bird videos are sub-par since they were captured using a CCTV camera pointed to the bird bath.
+    </p>
+    <p class="header-subtitle2">
+        The quality of the bird videos is sub-par since they were captured using a CCTV camera pointed to the bird bath.
     </p>
 </header>
+
 
         <div class="birds-grid">
             <div class="bird-card">
@@ -684,8 +737,28 @@
         </div>
 <!-- End New Bird -->
 
+<!-- New Bird --> 
 
-
+            <div class="bird-card">
+                <div class="bird-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Indian_robin_%28Saxicoloides_fulicatus_cambaiensis%29_female_Narlai.jpg/500px-Indian_robin_%28Saxicoloides_fulicatus_cambaiensis%29_female_Narlai.jpg" alt="Indian Robin Female">
+                </div>
+                <div class="bird-name">Indian Robin - Female </div>
+                <div class="bird-scientific">Eudynamys scolopaceus</div>
+                <div class="bird-info">
+                    <span class="info-label">Genus:</span>
+                    <span class="info-value">Copsychus</span>
+                </div>
+                <div class="bird-info">
+                    <span class="info-label">Species:</span>
+                    <span class="info-value">C. fulicatus</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://en.wikipedia.org/wiki/Indian_robin" class="bird-link" target="_blank">Learn More</a>
+					<a href="#" class="view-bird-btn" onclick="openVideoModal('https://youtube.com/embed/sMMgLhstwps', 'Indian Robin- Female')">View Bird @ Site</a>
+                </div>		
+        </div>
+<!-- End New Bird -->
 
 <!--------------- PAGE FOOTER --------------->
 
