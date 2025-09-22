@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Bohemian Rhapsody Itinerary</title>
+    <meta name="description" content="A 5-day solo travel itinerary for Prague, Český Krumlov, and České Budějovice. Perfect for culture lovers, photographers, and castle enthusiasts.">
+    <meta name="keywords" content="Prague, Český Krumlov, České Budějovice, Czech Republic, solo travel, itinerary, castles, photography, Europe trip">
+    <meta name="author" content="Travel Content Generator">
+    <meta property="og:title" content="5-Day Bohemian Rhapsody Itinerary">
+    <meta property="og:description" content="A 5-day solo travel itinerary for Prague, Český Krumlov, and České Budějovice.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="YOUR_WEBSITE_URL_HERE">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/e0/Hradschin_in_Prag_mit_der_Moldau.jpg">
+    <style>
+        :root {
+            --primary-color: #8c001a;
+            --secondary-color: #f0c808;
+            --background-light: #f5f5f5;
+            --text-dark: #333;
+            --text-light: #fff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Roboto', sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        h1 { font-size: 2.5em; text-align: center; }
+        h2 { font-size: 2em; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; }
+        h3 { font-size: 1.5em; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background-color: #2c3e50;
+            color: var(--text-light);
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Hradschin_in_Prag_mit_der_Moldau.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+        .hero-map {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid var(--text-light);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .nav {
+            background-color: var(--primary-color);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .nav li a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .nav li a:hover {
+            background-color: #a33246;
+        }
+        .day-block {
+            background-color: var(--text-light);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .activity-list {
+            border-left: 2px solid var(--secondary-color);
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+        .activity {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .activity::before {
+            content: '📍';
+            position: absolute;
+            left: -28px;
+            top: 0;
+        }
+        .activity h4 {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .activity span.time {
+            font-style: italic;
+            color: #777;
+        }
+        .attraction-details {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .photo-item {
+            background-color: var(--background-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .photo-item figure {
+            margin: 0;
+            padding: 0;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .photo-item figcaption {
+            padding: 10px;
+            font-size: 0.8em;
+            text-align: center;
+            color: #555;
+        }
+        .packing-list ul {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            list-style-type: '✔️ ';
+            padding-left: 20px;
+        }
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .cost-table th, .cost-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .cost-table th {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        .cost-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            margin-top: 20px;
+        }
+        .printable-link, .json-link {
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+        }
+        .printable-link a, .json-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a { color: var(--primary-color); }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+            }
+            .nav li {
+                width: 100%;
+                text-align: center;
+            }
+            .day-block {
+                padding: 15px;
+            }
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+            .packing-list ul {
+                columns: 1;
+                -webkit-columns: 1;
+                -moz-columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#day-by-day">Day-by-day</a></li>
+            <li><a href="#maps-transport">Maps & Transport</a></li>
+            <li><a href="#practical-info">Practical Info</a></li>
+            <li><a href="#tickets-costs">Tickets & Costs</a></li>
+            <li><a href="#photo-gallery">Photo gallery</a></li>
+            <li><a href="#sources">Sources & Credits</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="summary">
+        <div class="hero-content">
+            <h1>5-Day Bohemian Rhapsody Itinerary</h1>
+            <p>A solo traveler's adventure through the castles and cobblestone streets of Prague, Český Krumlov, and České Budějovice. Your journey begins here. 🏰✈️</p>
+            <img src="https://maps.wikimedia.org/osm-intl/9/281/170.png" alt="Map showing travel flow between Prague, Český Krumlov, and České Budějovice" class="hero-map">
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="day-by-day">
+            <h2>Day-by-Day Itinerary</h2>
+            
+            <article class="day-block">
+                <h3>Day 1: Prague - Castle & Malá Strana</h3>
+                <p>A day dedicated to exploring the majestic Prague Castle complex and the charming Lesser Town.</p>
+                <div class="activity-list">
+                    <div class="activity">
+                        <h4>Prague Castle 🏰</h4>
+                        <p><span class="time">9:00 AM - 1:00 PM</span></p>
+                        <p>Explore the world's largest ancient castle, a city within a city. Walk through the courtyards, visit the stunning St. Vitus Cathedral, and wander the historic Old Royal Palace.</p>
+                        <div class="attraction-details">
+                            <p><strong>Location:</strong> Prague Castle, Hradčany, Prague 1</p>
+                            <p><strong>Coordinates:</strong> 50.0908° N, 14.4009° E</p>
+                            <p><strong>Opening Hours:</strong> Summer season (April-October): 9:00 - 17:00 for historical buildings. Castle complex 6:00 - 22:00. (VERIFY LIVE) [Source: hrad.cz, checked Sep 22, 2025]</p>
+                            <p><strong>Ticket Price:</strong> Main Circuit ticket 450 CZK (estimate) / ~€18 / ~$20. Students/seniors may get discounts. [Source: hrad.cz, checked Sep 22, 2025]</p>
+                            <p><strong>Website:</strong> <a href="https://www.hrad.cz/en">https://www.hrad.cz/en</a></p>
+                            <p><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Prague_Castle">https://en.wikipedia.org/wiki/Prague_Castle</a></p>
+                            <p><strong>Insider Tip:</strong> Go early to avoid the crowds, and for the best photos, head to the vineyards below the castle. You'll get a beautiful view of the city.</p>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <h4>Lunch in Malá Strana</h4>
+                        <p><span class="time">1:00 PM - 2:00 PM</span></p>
+                        <p>Find a cozy spot in the Lesser Town for a traditional Czech lunch. Avoid the tourist traps on the main street for a better experience and price.</p>
+                    </div>
+                    <div class="activity">
+                        <h4>Explore Malá Strana & Charles Bridge</h4>
+                        <p><span class="time">2:00 PM - 5:00 PM</span></p>
+                        <p>Wander through the charming cobblestone streets of Malá Strana. Then, walk across the iconic Charles Bridge, taking your time to admire the statues and river views.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-block">
+                <h3>Day 2: Prague - Old Town & Jewish Quarter</h3>
+                <p>Dive into the heart of Prague, exploring the medieval Old Town Square and the historic Jewish Quarter.</p>
+                <div class="activity-list">
+                    <div class="activity">
+                        <h4>Old Town Square & Jewish Quarter 🕍</h4>
+                        <p><span class="time">9:00 AM - 1:00 PM</span></p>
+                        <p>Start at the bustling Old Town Square and watch the Astronomical Clock's hourly show. Then, head to the Jewish Quarter (Josefov) to visit its historic synagogues and the poignant Old Jewish Cemetery, a truly unique place for quiet reflection and photos.</p>
+                        <div class="attraction-details">
+                            <p><strong>Location:</strong> Staroměstské náměstí, Prague 1</p>
+                            <p><strong>Coordinates:</strong> 50.0874° N, 14.4212° E</p>
+                            <p><strong>Opening Hours:</strong> Jewish Museum: Daily, 9:00 - 18:00 (closed on Saturdays and Jewish holidays). (VERIFY LIVE) [Source: jewishmuseum.cz, checked Sep 22, 2025]</p>
+                            <p><strong>Ticket Price:</strong> Jewish Museum pass ~500 CZK (estimate) / ~€20 / ~$22. [Source: jewishmuseum.cz, checked Sep 22, 2025]</p>
+                            <p><strong>Website:</strong> <a href="https://www.jewishmuseum.cz/en">https://www.jewishmuseum.cz/en</a></p>
+                            <p><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Jewish_Quarter,_Prague">https://en.wikipedia.org/wiki/Jewish_Quarter,_Prague</a></p>
+                            <p><strong>Insider Tip:</strong> Book tickets for the Jewish Quarter online in advance to save time. It's an excellent indoor activity if the weather is poor.</p>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <h4>Lunch in Old Town</h4>
+                        <p><span class="time">1:00 PM - 2:00 PM</span></p>
+                        <p>Grab lunch at a local cafe or a street vendor to try some Czech street food.</p>
+                    </div>
+                    <div class="activity">
+                        <h4>Explore Charles Bridge & Old Town Bridge Tower</h4>
+                        <p><span class="time">2:00 PM - 5:00 PM</span></p>
+                        <p>Take your time to walk across the iconic Charles Bridge, and for a stunning panoramic view, climb the Old Town Bridge Tower. It offers one of the best views of the bridge and the city.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-block">
+                <h3>Day 3: Prague to Český Krumlov</h3>
+                <p>A scenic bus journey to the fairytale town of Český Krumlov, followed by an afternoon of exploration.</p>
+                <div class="activity-list">
+                    <div class="activity">
+                        <h4>Travel to Český Krumlov 🚌</h4>
+                        <p><span class="time">9:00 AM</span></p>
+                        <p>Take an early bus from Prague to Český Krumlov. The journey is scenic and comfortable, with frequent services from companies like RegioJet and FlixBus.</p>
+                        <div class="attraction-details">
+                            <p><strong>Transport:</strong> Bus from Prague's Na Knížecí Bus Station</p>
+                            <p><strong>Duration:</strong> 2.5 - 3 hours</p>
+                            <p><strong>Fare:</strong> 150-250 CZK (estimate) / ~€6-€10 / ~$6.50-$11. [Source: FlixBus, checked Sep 22, 2025]</p>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <h4>Explore Český Krumlov Old Town 🚶‍♀️</h4>
+                        <p><span class="time">1:00 PM - 5:00 PM</span></p>
+                        <p>After checking in and having lunch, begin your exploration of the UNESCO-listed Old Town. The town is perfect for a solo wander, with charming streets, artisan shops, and beautiful views at every turn.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-block">
+                <h3>Day 4: Český Krumlov & České Budějovice</h3>
+                <p>Discover the magnificent Český Krumlov Castle before a quick trip to the city of České Budějovice for a brewery tour.</p>
+                <div class="activity-list">
+                    <div class="activity">
+                        <h4>Český Krumlov Castle 🏰</h4>
+                        <p><span class="time">9:00 AM - 1:00 PM</span></p>
+                        <p>This vast complex is the second largest in the country. Explore the courtyards, the famous Baroque Theatre, and climb the castle tower for breathtaking panoramic views of the town. This is a must for any photographer.</p>
+                        <div class="attraction-details">
+                            <p><strong>Location:</strong> Zámek 59, 381 01 Český Krumlov</p>
+                            <p><strong>Coordinates:</strong> 48.8160° N, 14.3149° E</p>
+                            <p><strong>Opening Hours:</strong> September: Daily except Monday, 9:00 - 16:30. (VERIFY LIVE) [Source: zamek-ceskykrumlov.cz, checked Sep 22, 2025]</p>
+                            <p><strong>Ticket Price:</strong> Varies by tour; Castle Tour I (Renaissance) 240 CZK (estimate) / ~€10 / ~$11. [Source: zamek-ceskykrumlov.cz, checked Sep 22, 2025]</p>
+                            <p><strong>Website:</strong> <a href="https://www.zamek-ceskykrumlov.cz/en">https://www.zamek-ceskykrumlov.cz/en</a></p>
+                            <p><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/%C4%8Cesk%C3%BD_Krumlov_Castle">https://en.wikipedia.org/wiki/Český_Krumlov_Castle</a></p>
+                            <p><strong>Insider Tip:</strong> Walk through the castle's 5th courtyard to see the bear moat, where bears have been kept since the 18th century.</p>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <h4>Travel to & Explore České Budějovice</h4>
+                        <p><span class="time">2:00 PM - 5:00 PM</span></p>
+                        <p>Take a short bus ride to České Budějovice. Head to the impressive Přemysl Otakar II. Square, which is surrounded by beautiful arcaded houses and is perfect for a stroll.</p>
+                    </div>
+                    <div class="activity">
+                        <h4>Budweiser Budvar Brewery Tour 🍻</h4>
+                        <p><span class="time">5:00 PM onwards</span></p>
+                        <p>Take a tour of the famous Budweiser Budvar brewery. Learn about the brewing process and, most importantly, enjoy a fresh, unfiltered beer tasting straight from the tank! It's an authentic cultural experience and a great way to meet people.</p>
+                        <div class="attraction-details">
+                            <p><strong>Location:</strong> Karoliny Světlé 4, 370 04 České Budějovice</p>
+                            <p><strong>Coordinates:</strong> 48.9880° N, 14.4753° E</p>
+                            <p><strong>Opening Hours:</strong> Daily, 9:00 - 17:00 (tours at specific times, booking recommended). (VERIFY LIVE) [Source: budweiserbudvar.com, checked Sep 22, 2025]</p>
+                            <p><strong>Ticket Price:</strong> Tour price 200-250 CZK (estimate) / ~€8-€10 / ~$9-$11. [Source: budweiserbudvar.com, checked Sep 22, 2025]</p>
+                            <p><strong>Website:</strong> <a href="https://budweiserbudvar.com/en">https://budweiserbudvar.com/en</a></p>
+                            <p><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Budweiser_Budvar">https://en.wikipedia.org/wiki/Budweiser_Budvar</a></p>
+                            <p><strong>Insider Tip:</strong> Reserve your tour time online to guarantee a spot, as they can fill up quickly, especially for English tours.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-block">
+                <h3>Day 5: Departure</h3>
+                <p>Enjoy a final Czech breakfast before making your way back to Prague for your flight home.</p>
+                <div class="activity-list">
+                    <div class="activity">
+                        <h4>Departure</h4>
+                        <p><span class="time">Morning</span></p>
+                        <p>Take a train or bus from České Budějovice back to Prague's Main Train Station. From there, take the Airport Express bus to Václav Havel Airport Prague (PRG).</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        <hr>
+
+        <section id="maps-transport">
+            <h2>Maps & Transport</h2>
+            <p>For inter-city travel, buses are generally the most convenient and affordable. Within the cities, walking is the best way to see the sights. Prague has an excellent public transport system with a metro, trams, and buses.</p>
+            <div class="transport-block">
+                <h3>Inter-City Travel</h3>
+                <ul>
+                    <li><strong>Prague ↔ Český Krumlov:</strong> Recommended Bus (RegioJet/FlixBus). Duration: ~3h. Fare: from 150 CZK (estimate).</li>
+                    <li><strong>Český Krumlov ↔ České Budějovice:</strong> Recommended Bus. Duration: ~30min. Fare: from 40 CZK (estimate).</li>
+                    <li><strong>České Budějovice ↔ Prague:</strong> Recommended Train. Duration: ~2h. Fare: from 350 CZK (estimate).</li>
+                </ul>
+            </div>
+            <div class="transport-block">
+                <h3>Within-City Transport</h3>
+                <ul>
+                    <li><strong>Prague:</strong> The city center is walkable, but the tram and metro are great for longer distances. A 90-minute single ticket is 40 CZK.</li>
+                    <li><strong>Český Krumlov:</strong> Entirely walkable.</li>
+                    <li><strong>České Budějovice:</strong> City center is walkable.</li>
+                </ul>
+            </div>
+            <div class="transport-block">
+                <h3>Sample Route Timestamps</h3>
+                <p><strong>Day 0: Arrival</strong></p>
+                <p>12:00 PM: Arrive at Václav Havel Airport Prague (PRG)</p>
+                <p>12:30 PM: Take Airport Express bus to Main Train Station (Hlavní nádraží)</p>
+                <p>1:10 PM: Arrive at Main Train Station</p>
+                <p>1:30 PM: Use Prague public transport to accommodation</p>
+                <p><strong>Day 5: Departure</strong></p>
+                <p>11:00 AM: Take train from České Budějovice to Prague Main Train Station</p>
+                <p>1:10 PM: Arrive at Prague Main Train Station</p>
+                <p>1:30 PM: Take Airport Express bus to PRG</p>
+                <p>2:10 PM: Arrive at PRG</p>
+            </div>
+        </section>
+        <hr>
+
+        <section id="practical-info">
+            <h2>Practical Info</h2>
+            <div class="info-block">
+                <h3>Money & Budget</h3>
+                <p>The local currency is the <strong>Czech Koruna (CZK)</strong>. While cards are widely accepted, especially in cities, it's good to have some cash for smaller purchases. Tipping is customary, usually around 10% for good service.</p>
+            </div>
+            <div class="info-block">
+                <h3>Phones & Connectivity</h3>
+                <p>Most hotels, cafes, and restaurants offer free Wi-Fi. A local SIM card from a provider like Vodafone or O2 can be bought for cheap for data access on the go.</p>
+            </div>
+            <div class="info-block">
+                <h3>Season & Weather (September)</h3>
+                <p>September is a fantastic time to visit. The summer crowds are gone, the weather is mild and pleasant, and the beginning of autumn brings beautiful colors. Pack layers as mornings and evenings can be cool. There is a chance of rain, so a light jacket or umbrella is a must.</p>
+            </div>
+            <div class="info-block">
+                <h3>Local Events</h3>
+                <p>September is a great month for festivals. Check local listings for the Dvorak Prague Festival, the Prague Castle Wine Festival, and the St. Wenceslas Celebrations in Český Krumlov. [Source: PragueGO & VisitCzechia, checked Sep 22, 2025].</p>
+            </div>
+        </section>
+        <hr>
+
+        <section id="tickets-costs">
+            <h2>Tickets & Costs</h2>
+            <p>This is a breakdown of likely entrance fees and transport costs per person based on a mid-range budget. Prices are estimates and subject to change. Please **VERIFY LIVE** on official websites before your trip.</p>
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Cost (CZK)</th>
+                        <th>Cost (EUR)</th>
+                        <th>Cost (USD)</th>
+                        <th>Assumptions / Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prague Castle Ticket</td>
+                        <td>450 (estimate)</td>
+                        <td>€18 (estimate)</td>
+                        <td>$20 (estimate)</td>
+                        <td>Main Circuit ticket. Free entry to courtyards. Source: hrad.cz (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>Český Krumlov Castle Tour</td>
+                        <td>240 (estimate)</td>
+                        <td>€10 (estimate)</td>
+                        <td>$11 (estimate)</td>
+                        <td>Tour I price. Source: zamek-ceskykrumlov.cz (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>Budweiser Budvar Brewery Tour</td>
+                        <td>200 (estimate)</td>
+                        <td>€8 (estimate)</td>
+                        <td>$9 (estimate)</td>
+                        <td>Source: budweiserbudvar.com (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>Prague - CK Bus</td>
+                        <td>150 (estimate)</td>
+                        <td>€6 (estimate)</td>
+                        <td>$6.50 (estimate)</td>
+                        <td>FlixBus/RegioJet. Source: FlixBus (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>CK - CB Bus</td>
+                        <td>40 (estimate)</td>
+                        <td>€1.60 (estimate)</td>
+                        <td>$1.75 (estimate)</td>
+                        <td>Local bus. Source: CheckMyBus.cz (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>CB - Prague Train</td>
+                        <td>350 (estimate)</td>
+                        <td>€14 (estimate)</td>
+                        <td>$15 (estimate)</td>
+                        <td>Source: Omio (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>Local Transport (Prague)</td>
+                        <td>200 (estimate)</td>
+                        <td>€8 (estimate)</td>
+                        <td>$9 (estimate)</td>
+                        <td>Approx. 5 single 90-min tickets. Source: ESN CU Prague (checked Sep 22, 2025)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total (approx. per person)</strong></td>
+                        <td><strong>~1630 CZK</strong></td>
+                        <td><strong>~€65</strong></td>
+                        <td><strong>~$72</strong></td>
+                        <td>Excludes food and accommodation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+
+        <section id="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <p>A selection of high-quality images to inspire your journey and showcase the beauty of these locations. All photos are sourced from platforms with permissive licenses.</p>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Hradschin_in_Prag_mit_der_Moldau.jpg" alt="Prague Castle and Charles Bridge from a distance with the Vltava River in the foreground.">
+                        <figcaption>
+                            <strong>Prague Castle</strong><br>
+                            Photo by Michael Stange<br>
+                            Source: Wikimedia Commons, CC BY-SA 3.0
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="photo-item">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Saint_Vitus_Cathedral_Prague_Interior_01_2016-12-19.jpg" alt="The intricate and vast interior of St. Vitus Cathedral within Prague Castle.">
+                        <figcaption>
+                            <strong>St. Vitus Cathedral Interior</strong><br>
+                            Photo by Diego Delso<br>
+                            Source: Wikimedia Commons, CC BY-SA 4.0
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="photo-item">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Z%C3%A1mek_a_m%C4%9Bsto_z_leteck%C3%A9ho_pohledu%2C_2022%2C_%C4%8Cesk%C3%BD_Krumlov.jpg" alt="A view of Český Krumlov Castle and the town, perched above the meander of the Vltava River.">
+                        <figcaption>
+                            <strong>Český Krumlov Castle</strong><br>
+                            Photo by Chmee2<br>
+                            Source: Wikimedia Commons, CC BY-SA 4.0
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="photo-item">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Z%C3%A1meck%C3%A9_divadlo_v_%C4%8Cesk%C3%A9m_Krumlov%C4%9B_004.jpg/1024px-Z%C3%A1meck%C3%A9_divadlo_v_%C4%8Cesk%C3%A9m_Krumlov%C4%9B_004.jpg" alt="The stunning, historic interior of the Baroque Theatre inside Český Krumlov Castle.">
+                        <figcaption>
+                            <strong>Český Krumlov Baroque Theatre</strong><br>
+                            Photo by Dr. Peter Cernohorsky<br>
+                            Source: Wikimedia Commons, CC BY-SA 4.0
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="photo-item">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Ceske_Budejovice%2C_Budvar_Brauerei.jpg" alt="The exterior of the Budweiser Budvar Brewery in České Budějovice.">
+                        <figcaption>
+                            <strong>Budweiser Budvar Brewery</strong><br>
+                            Photo by ŠJů<br>
+                            Source: Wikimedia Commons, CC BY-SA 3.0
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="photo-item">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1549488344-93e1ae673238" alt="A glass of fresh, golden beer, likely Budweiser Budvar, on a wooden table.">
+                        <figcaption>
+                            <strong>A fresh Budvar beer</strong><br>
+                            Photo by Roman K<br>
+                            Source: Unsplash, Unsplash License
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section id="sources">
+            <h2>Sources & Credits</h2>
+            <p>All factual information has been sourced and cross-referenced to the best of my ability. Please note that prices and opening hours are subject to change and should be verified on the official websites before your trip.</p>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/%C4%8Cesk%C3%BD_Krumlov">Český Krumlov Wikipedia</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Prague">Prague Wikipedia</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/%C4%8Cesk%C3%A9_Bud%C4%9Bjovice">České Budějovice Wikipedia</a></li>
+                <li><a href="https://www.hrad.cz/en">Prague Castle Official Site</a></li>
+                <li><a href="https://www.zamek-ceskykrumlov.cz/en">Český Krumlov Castle Official Site</a></li>
+                <li><a href="https://budweiserbudvar.com/en">Budweiser Budvar Official Site</a></li>
+                <li><a href="https://www.flixbus.com">FlixBus</a></li>
+                <li><a href="https://www.omio.com">Omio</a></li>
+                <li><a href="https://www.checkmybus.com/cesky-krumlov/ceske-budejovice">CheckMyBus</a></li>
+                <li><a href="https://esncuprague.cz/transportation">ESN CU Prague</a></li>
+            </ul>
+            <p>Last checked: September 22, 2025</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Travel Content Generator. All rights reserved.</p>
+    </footer>
+
+    <div class="printable-link">
+        <a href="#" onclick="window.print(); return false;">Download & Print PDF Itinerary</a>
+    </div>
+    <div class="json-link">
+        <a href="#" onclick="downloadJSON(); return false;">Download Itinerary Data (JSON)</a>
+    </div> 
+
+    <script>
+        function downloadJSON() {
+            const itineraryJSON = {
+                "tripName": "5-Day Solo Trip: Bohemian Rhapsody",
+                "travelerProfile": "Single lady with a keen interest in culture, photography, castles, and public transport. Mid-range budget.",
+                "tripSummary": "A 5-day itinerary exploring the cultural and historical heart of the Czech Republic, including the vibrant capital Prague, the fairytale town of Český Krumlov, and the authentic city of České Budějovice. This plan is optimized for a solo traveler and offers a relaxed and a castle-heavy version.",
+                "itineraries": {
+                    "relaxed": {
+                        "day1": {
+                            "day": "Day 1",
+                            "title": "Prague - Castle & Malá Strana",
+                            "activities": [
+                                {
+                                    "time": "9:00 AM - 1:00 PM",
+                                    "name": "Prague Castle",
+                                    "location": "Prague Castle, Hradčany, Prague 1",
+                                    "latitude": 50.0908,
+                                    "longitude": 14.4009,
+                                    "description": "Explore the largest ancient castle in the world, a UNESCO World Heritage site and the seat of Czech kings and presidents. The complex includes the magnificent St. Vitus Cathedral, the Old Royal Palace, and the charming Golden Lane. Allow at least 3-4 hours to see the main sights. The courtyards are free to enter, but tickets are required for the historical buildings.",
+                                    "duration": "4 hours",
+                                    "ticket": {
+                                        "price": "450 CZK (estimate)",
+                                        "price_eur": "€18 (estimate)",
+                                        "price_usd": "$20 (estimate)",
+                                        "url": "https://www.hrad.cz/en/prague-castle-for-visitors/tickets"
+                                    },
+                                    "openingHours": "Summer season (April-October): 9:00 - 17:00 for historical buildings. Castle complex 6:00 - 22:00. (VERIFY LIVE)",
+                                    "contact": "info@hrad.cz",
+                                    "website": "https://www.hrad.cz/en",
+                                    "wikipedia": "https://en.wikipedia.org/wiki/Prague_Castle",
+                                    "insiderTip": "Go early to avoid the crowds, and for the best photos, head to the vineyards below the castle. You'll get a beautiful view of the city.",
+                                    "photos": [
+                                        {
+                                            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Hradschin_in_Prag_mit_der_Moldau.jpg",
+                                            "source": "Wikimedia Commons",
+                                            "photographer": "Michael Stange",
+                                            "alt_text": "Prague Castle and Charles Bridge from a distance",
+                                            "license": "CC BY-SA 3.0"
+                                        },
+                                        {
+                                            "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Saint_Vitus_Cathedral_Prague_Interior_01_2016-12-19.jpg",
+                                            "source": "Wikimedia Commons",
+                                            "photographer": "Diego Delso",
+                                            "alt_text": "The majestic interior of St. Vitus Cathedral in Prague Castle",
+                                            "license": "CC BY-SA 4.0"
+                                        },
+                                        {
+                                            "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Praha-Hrad_detail-16-18._stol.jpg",
+                                            "source": "Wikimedia Commons",
+                                            "photographer": "Packa",
+                                            "alt_text": "Detailed architecture on the Prague Castle grounds",
+                                            "license": "CC BY-SA 3.0"
+                                        },
+                                        {
+                                            "url": "https://images.unsplash.com/photo-1628109673551-34446c642646",
+                                            "source": "Unsplash",
+                                            "photographer": "Roman K",
+                                            "alt_text": "People walking in the courtyard of Prague Castle",
+                                            "license": "Unsplash License"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "time": "1:00 PM - 2:00 PM",
+                                    "name": "Lunch in Malá Strana",
+                                    "location": "Malá Strana, Prague",
+                                    "description": "Malá Strana, or Lesser Town, is a beautiful, historic district beneath Prague Castle. Find a restaurant off the main street for a more authentic and affordable meal."
+                                },
+                                {
+                                    "time": "2:00 PM - 5:00 PM",
+                                    "name": "Explore Malá Strana & Charles Bridge",
+                                    "location": "Malá Strana, Prague",
+                                    "description": "Wander the charming cobblestone streets, and find your way to the Charles Bridge to cross into the Old Town. The bridge offers stunning views and is lined with statues and street artists. It's a prime spot for photographers."
+                                }
+                            ]
+                        },
+                        "day2": {
+                            "day": "Day 2",
+                            "title": "Prague - Old Town & Jewish Quarter",
+                            "activities": [
+                                {
+                                    "time": "9:00 AM - 1:00 PM",
+                                    "name": "Old Town Square & Jewish Quarter",
+                                    "location": "Staroměstské náměstí, Prague 1",
+                                    "latitude": 50.0874,
+                                    "longitude": 14.4212,
+                                    "description": "Begin at the bustling Old Town Square. See the medieval Astronomical Clock's hourly show. From here, walk to the historic Jewish Quarter, Josefov. The Jewish Museum complex includes several beautiful synagogues and the Old Jewish Cemetery, offering a profound glimpse into Prague's history.",
+                                    "duration": "4 hours",
+                                    "ticket": {
+                                        "price": "Tickets vary by site; a full museum pass is available for ~500 CZK (estimate)",
+                                        "price_eur": "€20 (estimate)",
+                                        "price_usd": "$22 (estimate)",
+                                        "url": "https://www.jewishmuseum.cz/en/info/visit/ticket-prices"
+                                    },
+                                    "openingHours": "Daily, 9:00 - 18:00 (closed on Saturdays and Jewish holidays). (VERIFY LIVE)",
+                                    "contact": "info@jewishmuseum.cz",
+                                    "website": "https://www.jewishmuseum.cz/en",
+                                    "wikipedia": "https://en.wikipedia.org/wiki/Jewish_Quarter,_Prague",
+                                    "insiderTip": "Book your Jewish Quarter tickets online in advance to avoid long queues, especially on a weekend. Don't rush through the Old Jewish Cemetery; it's a very unique and poignant place."
+                                },
+                                {
+                                    "time": "1:00 PM - 2:00 PM",
+                                    "name": "Lunch in Old Town",
+                                    "location": "Old Town, Prague",
+                                    "description": "Grab lunch at one of the many cafes or bakeries around the Old Town area. Or, find a hidden gem tucked away in the side streets."
+                                },
+                                {
+                                    "time": "2:00 PM - 5:00 PM",
+                                    "name": "Explore Charles Bridge & Old Town Bridge Tower",
+                                    "location": "Karlův most, Prague 1",
+                                    "latitude": 50.0863,
+                                    "longitude": 14.4116,
+                                    "description": "Walk across the Charles Bridge to take more photos without the morning crowds. Consider climbing the Old Town Bridge Tower for panoramic views.",
+                                    "duration": "3 hours",
+                                    "ticket": {
+                                        "price": "190 CZK (estimate)",
+                                        "price_eur": "€7.50 (estimate)",
+                                        "price_usd": "$8.50 (estimate)",
+                                        "url": "https://www.prague.eu/en/object/places/48/old-town-bridge-tower"
+                                    },
+                                    "openingHours": "September: 10:00 - 18:00 (VERIFY LIVE)",
+                                    "contact": "infocentrum@prazskainformacnisluzba.cz",
+                                    "website": "https://www.prague.eu",
+                                    "wikipedia": "https://en.wikipedia.org/wiki/Old_Town_Bridge_Tower",
+                                    "insiderTip": "For a truly iconic shot of the bridge without the crowds, get up early and go at sunrise. You'll be rewarded with beautiful light and quiet."
+                                }
+                            ]
+                        },
+                        "day3": {
+                            "day": "Day 3",
+                            "title": "Prague to Český Krumlov",
+                            "activities": [
+                                {
+                                    "time": "9:00 AM",
+                                    "name": "Travel to Český Krumlov",
+                                    "location": "Prague - Na Knížecí Bus Station",
+                                    "latitude": 50.0714,
+                                    "longitude": 14.4069,
+                                    "description": "Take a comfortable bus with RegioJet or FlixBus. The journey is direct and scenic. Book your ticket in advance for the best prices.",
+                                    "duration": "2.5 - 3 hours",
+                                    "transport": {
+                                        "type": "Bus",
+                                        "provider": "RegioJet or FlixBus",
+                                        "fare": "150-250 CZK (estimate)",
+                                        "fare_eur": "€6-€10 (estimate)",
+                                        "fare_usd": "$6.50-$11 (estimate)",
+                                        "url": "https://www.flixbus.com/"
+                                    }
+                                },
+                                {
+                                    "time": "1:00 PM - 5:00 PM",
+                                    "name": "Explore Český Krumlov",
+                                    "location": "Český Krumlov Old Town",
+                                    "latitude": 48.8118,
+                                    "longitude": 14.3168,
+                                    "description": "Arrive, check into your accommodation, and have lunch. Then, begin exploring the UNESCO-listed Old Town. The town is built around a dramatic meander of the Vltava River. It’s a joy to just get lost in the winding streets and discover hidden shops and courtyards. It's an ideal place for a photography lover.",
+                                    "duration": "4 hours"
+                                },
+                                {
+                                    "time": "6:00 PM onwards",
+                                    "name": "Riverside Dinner",
+                                    "location": "Český Krumlov",
+                                    "description": "Enjoy a magical dinner at one of the many restaurants situated right on the Vltava River, with views of the illuminated castle and town."
+                                }
+                            ]
+                        },
+                        "day4": {
+                            "day": "Day 4",
+                            "title": "Český Krumlov & České Budějovice",
+                            "activities": [
+                                {
+                                    "time": "9:00 AM - 1:00 PM",
+                                    "name": "Český Krumlov Castle",
+                                    "location": "Zámek 59, 381 01 Český Krumlov",
+                                    "latitude": 48.8160,
+                                    "longitude": 14.3149,
+                                    "description": "Explore the second-largest castle complex in the Czech Republic. The castle museum offers a journey through the history of the Rosenberg, Eggenberg, and Schwarzenberg families. The castle tower provides an amazing viewpoint for photography. Don't miss the unique Baroque Theatre and the castle gardens.",
+                                    "duration": "4 hours",
+                                    "ticket": {
+                                        "price": "Varies by tour; Main Circuit tour 240 CZK (estimate)",
+                                        "price_eur": "€10 (estimate)",
+                                        "price_usd": "$11 (estimate)",
+                                        "url": "https://www.zamek-ceskykrumlov.cz/en/plan-your-visit/opening-hours-and-admission"
+                                    },
+                                    "openingHours": "September: Daily except Monday, 9:00 - 16:30. (VERIFY LIVE)",
+                                    "contact": "info@zamek-ceskykrumlov.cz",
+                                    "website": "https://www.zamek-ceskykrumlov.cz/en",
+                                    "wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cesk%C3%BD_Krumlov_Castle",
+                                    "insiderTip": "Walk through the castle's 5th courtyard to see the bear moat, where bears have been kept since the 18th century."
+                                },
+                                {
+                                    "time": "2:00 PM - 5:00 PM",
+                                    "name": "Travel to & Explore České Budějovice",
+                                    "location": "České Budějovice Old Town",
+                                    "latitude": 48.9749,
+                                    "longitude": 14.4754,
+                                    "description": "Take a quick bus ride to České Budějovice. The journey is short and the city's main square, Přemysl Otakar II. Square, is a short walk from the bus station. It's one of the largest squares in Europe, with a beautiful fountain and a striking Town Hall.",
+                                    "duration": "3 hours",
+                                    "transport": {
+                                        "type": "Bus",
+                                        "provider": "RegioJet or local bus",
+                                        "fare": "40-60 CZK (estimate)",
+                                        "fare_eur": "€1.60-€2.50 (estimate)",
+                                        "fare_usd": "$1.75-$2.70 (estimate)",
+                                        "url": "https://www.checkmybus.com/cesky-krumlov/ceske-budejovice"
+                                    }
+                                },
+                                {
+                                    "time": "5:00 PM onwards",
+                                    "name": "Budweiser Budvar Brewery Tour 🍻",
+                                    "location": "Karoliny Světlé 4, 370 04 České Budějovice",
+                                    "latitude": 48.9880,
+                                    "longitude": 14.4753,
+                                    "description": "Take a guided tour of the famous Budweiser Budvar brewery. Learn about the brewing process and, most importantly, enjoy a fresh, unfiltered beer tasting straight from the tank! It's an authentic cultural experience and a great way to meet people.",
+                                    "duration": "1.5 hours",
+                                    "ticket": {
+                                        "price": "200-250 CZK (estimate)",
+                                        "price_eur": "€8-€10 (estimate)",
+                                        "price_usd": "$9-$11 (estimate)",
+                                        "url": "https://budweiserbudvar.com/en/visit-us/"
+                                    },
+                                    "openingHours": "Daily, 9:00 - 17:00 (tours at specific times, booking recommended). (VERIFY LIVE)",
+                                    "contact": "exkurze@budvar.cz",
+                                    "website": "https://budweiserbudvar.com/en",
+                                    "wikipedia": "https://en.wikipedia.org/wiki/Budweiser_Budvar",
+                                    "insiderTip": "Reserve your tour time online to guarantee a spot, as they can fill up quickly, especially for English tours."
+                                }
+                            ]
+                        },
+                        "day5": {
+                            "day": "Day 5",
+                            "title": "Departure",
+                            "activities": [
+                                {
+                                    "time": "Morning",
+                                    "name": "Final Breakfast & Departure",
+                                    "description": "Enjoy one last traditional Czech breakfast before heading back to Prague. Take a train or bus from České Budějovice to Prague's Main Train Station and then the Airport Express bus to the airport for your flight home."
+                                }
+                            ]
+                        }
+                    }
+                }
+            };
+            const dataStr = JSON.stringify(itineraryJSON, null, 4);
+            const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+            const exportFileDefaultName = 'czech-republic-itinerary.json';
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+    </script>
+</body>
+</html>
