@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A few videos and photographs of our holiday trip of Oct 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --maxw: 1200px;
+      --pad: 16px;
+    }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(to bottom, #f0f4f8, #e0e7ff);
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+    }
+    .sidebar a {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #3b82f6;
+      color: white;
+    }
+    .frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #000;
+    }
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        position: static;
+        max-height: none;
+      }
+      .content {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="container mx-auto px-4 py-8 max-w-[var(--maxw)]">
+    <header class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-800">A few videos and photographs of our holiday trip of Oct 2025</h1>
+      <p class="mt-4 text-lg text-gray-600">
+        <a href="https://flic.kr/s/aHBqjCxFfM" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
+          Please click here for static pics
+        </a>
+      </p>
+    </header>
+
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar md:w-1/4 bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Video Navigation</h2>
+        <nav class="space-y-2">
+          <a href="#thumboormuzhi" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-600 hover:text-white">Thumboormuzhi Hanging Bridge</a>
+          <a href="#athirappilly" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-600 hover:text-white">Athirappilly Falls</a>
+          <a href="#houseboat" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-600 hover:text-white">The House Boat @ Kumarakom</a>
+          <a href="#vembanad" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-600 hover:text-white">Sailing on the Vembanad Lake</a>
+          <a href="#cherai" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-600 hover:text-white">Living Waters - Airbnb @ Cherai</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content md:w-3/4 space-y-12">
+        <section id="thumboormuzhi" class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Thumboormuzhi Hanging Bridge</h2>
+          <div class="frame">
+            <iframe 
+              src="https://youtube.com/embed/EpiuEfY_Q3s"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Thumboormuzhi Hanging Bridge">
+            </iframe>
+          </div>
+        </section>
+
+        <section id="athirappilly" class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Athirappilly Falls</h2>
+          <div class="frame">
+            <iframe 
+              src="https://youtube.com/embed/RWOQHtrdAj8"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Athirappilly Falls">
+            </iframe>
+          </div>
+        </section>
+
+        <section id="houseboat" class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">The House Boat @ Kumarakom</h2>
+          <div class="frame">
+            <iframe 
+              src="https://youtube.com/embed/ML38SEG6esk"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="The House Boat @ Kumarakom">
+            </iframe>
+          </div>
+        </section>
+
+        <section id="vembanad" class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sailing on the Vembanad Lake</h2>
+          <div class="frame">
+            <iframe 
+              src="https://youtube.com/embed/tzfIVR-YJv0"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sailing on the Vembanad Lake">
+            </iframe>
+          </div>
+        </section>
+
+        <section id="cherai" class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Living Waters - Airbnb @ Cherai</h2>
+          <div class="frame">
+            <iframe 
+              src="https://youtube.com/embed/IJOn6LnrkGE"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Living Waters - Airbnb @ Cherai">
+            </iframe>
+          </div>
+        </section>
+
+        <section id="maps-transport" class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Round Trip</h2>
+          <p class="text-gray-600 mb-4">This is a road trip by car. Estimated distances and times:</p>
+          <div class="day">
+            <h3 class="text-xl font-medium text-gray-700">Bangalore > Ooty > Chalakudy > Athirappilly > Chalakudy > Kumarakom > Cherai > Bangalore</h3>
+            <p class="text-gray-600">Start: Sat 18-Oct  End: Sat 25-Oct</p>
+            <a href="https://www.google.com/maps/dir/Valmark+Orchard+Square,+Kothnur+Main+Rd,+next+to+BMTC+Depot%23+34,+8th+Phase,+J.+P.+Nagar,+Bengaluru,+Karnataka+560076,+India/Ooty,+Tamil+Nadu/Chalakudy,+Kerala/Athirappilly+Water+Falls/Chalakudy,+Kerala/9.64538,76.4229889/Ambedkar+Beach/Valmark+Orchard+Square,+Kothnur+Main+Rd,+next+to+BMTC+Depot%23+34,+8th+Phase,+J.+P.+Nagar,+Bengaluru,+Karnataka+560076,+India/@11.2709985,75.8357276,8z/data=!4m45!4m44!1m5!1m1!1s0x3bae6ac98ad7fc07:0x36ff663119d450cb!2m2!1d77.5862871!2d12.8706284!1m5!1m1!1s0x3ba8bd84b5f3d78d:0x179bdb14c93e3f42!2m2!1d76.6950324!2d11.4102038!1m5!1m1!1s0x3b080269866481a9:0x6b5ec1dc50c0402d!2m2!1d76.3340589!2d10.3070105!1m5!1m1!1s0x3b07f923c2abb0d1:0x1e7af75aa13af78!2m2!1d76.5697643!2d10.2851072!1m5!1m1!1s0x3b080269866481a9:0x6b5ec1dc50c0402d!2m2!1d76.3340589!2d10.3070105!1m0!1m5!1m1!1s0x3b0810b38a56740b:0x90f7592870f7a213!2m2!1d76.1825332!2d10.1276606!1m5!1m1!1s0x3bae6ac98ad7fc07:0x36ff663119d450cb!2m2!1d77.5862871!2d12.8706284!3e0?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-600 hover:text-blue-800 underline">
+              Round trip Route: Total 1,244 KM
+            </a>
+            <img src="https://fillmoreind.github.io/img/klroundtrip.png" alt="Round Trip Map" class="mt-4 rounded-lg shadow-md" style="max-width: 100%; height: auto;">
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
