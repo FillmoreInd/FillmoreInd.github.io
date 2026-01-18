@@ -1,0 +1,144 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Breakout with Price Movement</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 20px; 
+            background-color: #f8f9fa; 
+            color: #2c3e50; 
+        }
+        h1 { 
+            color: #e67e22; 
+            text-align: center; 
+            border-bottom: 3px solid #e67e22; 
+            padding-bottom: 12px; 
+            margin-bottom: 30px; 
+        }
+        h2 { 
+            color: #d35400; 
+        }
+        p.intro {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 5px solid #e67e22;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        ul { 
+            list-style-type: square; 
+            padding-left: 25px; 
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin: 25px 0; 
+            background-color: #ffffff; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08); 
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        th, td { 
+            border: 1px solid #e0e0e0; 
+            padding: 14px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #e67e22; 
+            color: white; 
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #fffaf0;
+        }
+        .highlight {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        a { 
+            color: #e67e22; 
+            text-decoration: none; 
+            font-weight: 500;
+        }
+        a:hover { 
+            text-decoration: underline; 
+            color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volume Breakout with Price Movement</h1>
+    
+    <p class="intro">
+        This report scans for stocks showing <strong>abnormal volume surges combined with positive price action</strong> — a classic sign of institutional interest and potential strong momentum. High volume on up days often indicates the start of a new uptrend or continuation of an existing one, making these stocks attractive for swing trades and short-to-medium term gains.
+    </p>
+    
+    <h2>Column Explanations</h2>
+    
+    <ul>
+        <li><strong>stock code</strong>: The ticker symbol or identifier of the stock (e.g., RELIANCE, TSLA, DBS). This is how you can quickly find and track the stock on your trading platform.</li>
+        <li><strong>current price</strong>: The most recent trading price of the stock (real-time or last close depending on market hours). This is your reference point for entry and target calculations.</li>
+        <li><strong>last return pct</strong>: The percentage price change over the most recent period (typically the last trading day or session). Positive values (especially >2–5%) show strong upward price momentum on the breakout day.</li>
+        <li><strong>volume ratio</strong>: The ratio of today's (or latest session's) volume compared to the average volume over a lookback period (commonly 10–50 days). <span class="highlight">Values > 1.5–3.0x</span> indicate unusually high trading activity — the key signal in volume breakouts.</li>
+        <li><strong>volume cr</strong>: Cumulative Relative Volume or "Volume Confirmation Ratio" — often shows how much the volume has accumulated above average over recent sessions (e.g., last 3–5 days). Higher values reinforce that the volume surge is sustained, not just a one-day spike.</li>
+        <li><strong>last close</strong>: The closing price of the previous trading session. Useful for calculating intraday movement and comparing with current price.</li>
+    </ul>
+    
+    <h2>Tips for Picking Stocks for Strong Moves (Swing / 2–8 Weeks Horizon)</h2>
+    
+    <p>
+        Volume breakouts with positive price action are among the most powerful setups for quick and explosive returns. Focus on these key filters when scanning the report:
+    </p>
+    
+    <table>
+        <tr>
+            <th>Priority</th>
+            <th>What to Look For</th>
+            <th>Why It Matters</th>
+            <th>Typical Expected Move</th>
+        </tr>
+        <tr>
+            <td>1 (Most Important)</td>
+            <td><strong>volume ratio ≥ 2.0x – 4.0x</strong> (ideally >3x)</td>
+            <td>Shows serious buying interest from institutions/smart money</td>
+            <td>High probability of 10–30%+ follow-through</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><strong>last return pct ≥ +3% to +8%</strong> (preferably +4–10%)</td>
+            <td>Confirms the volume is accompanied by strong bullish price action</td>
+            <td>Stronger the candle → stronger the trend continuation</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><strong>volume cr</strong> elevated (e.g., >1.5–2.0 over last few days)</td>
+            <td>Indicates sustained interest, not just a one-day wonder</td>
+            <td>Reduces false breakout risk</td>
+        </tr>
+        <tr>
+            <td>Avoid / Caution</td>
+            <td>volume ratio <1.5x OR last return pct negative/flat</td>
+            <td>Lack of conviction — likely a failed or weak breakout</td>
+            <td>High risk of reversal or chop</td>
+        </tr>
+    </table>
+    
+    <p>
+        <strong>Best setups:</strong> volume ratio > 3× + last return pct > 5% + breakout above key resistance.<br>
+        These frequently deliver fast 12–40% moves in 3–8 weeks during bull markets or strong sectors.<br>
+        Always confirm with chart patterns (e.g., consolidation breakout), support levels, and stop-loss below breakout day low.
+    </p>
+    
+    <h2>More Reading</h2>
+    <ul>
+        <li><a href="https://www.investopedia.com/terms/v/volume.asp">Understanding Volume in Trading - Investopedia</a></li>
+        <li><a href="https://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:volume">Volume - StockCharts Technical Indicators</a></li>
+        <li><a href="https://www.tradingsim.com/blog/volume-breakout">Volume Breakout Trading Strategy - TradingSim</a></li>
+        <li><a href="https://www.tradingsetupsreview.com/volume-price-analysis-breakouts/">Volume Price Analysis for Breakouts - Trading Setups Review</a></li>
+    </ul>
+</body>
+</html>

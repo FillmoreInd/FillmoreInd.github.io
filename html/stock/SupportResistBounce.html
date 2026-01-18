@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support/Resistance Bounce</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.7; 
+            margin: 25px; 
+            background-color: #f0f7ff; 
+            color: #0f2c5e; 
+        }
+        h1 { 
+            color: #2980b9; 
+            text-align: center; 
+            border-bottom: 4px solid #2980b9; 
+            padding-bottom: 15px; 
+            margin-bottom: 35px; 
+            font-size: 2.5em;
+        }
+        h2 { 
+            color: #1e6091; 
+            margin-top: 40px; 
+        }
+        p.intro {
+            background-color: #e3f2fd;
+            padding: 20px 26px;
+            border-left: 6px solid #2980b9;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            font-size: 1.1em;
+            box-shadow: 0 3px 8px rgba(41,128,185,0.12);
+        }
+        ul { 
+            list-style-type: square; 
+            padding-left: 30px; 
+            margin-bottom: 25px;
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin: 30px 0; 
+            background-color: #ffffff; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07); 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { 
+            border: 1px solid #bbdefb; 
+            padding: 15px 18px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #2980b9; 
+            color: white; 
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f5faff;
+        }
+        .highlight-blue {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .highlight-green {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        a { 
+            color: #2980b9; 
+            text-decoration: none; 
+            font-weight: 500;
+        }
+        a:hover { 
+            color: #1e6091; 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Support/Resistance Bounce</h1>
+    
+    <p class="intro">
+        This report identifies stocks that have recently bounced strongly from key <strong>support levels</strong> — a classic bullish reversal or continuation pattern. When price touches or tests a major support zone (often near moving averages, previous lows, or psychological levels) and then rallies decisively, it frequently signals renewed buying interest and potential for a multi-week or multi-month upmove.
+    </p>
+    
+    <h2>Column Explanations</h2>
+    
+    <ul>
+        <li><strong>Stock Code</strong>: The ticker symbol or identifier of the stock (e.g., DBS, GOOGL, SIA). Use this to quickly access charts and place trades.</li>
+        <li><strong>Current Price</strong>: The most recent trading price (real-time or latest close). This shows where the stock is currently trading after the bounce.</li>
+        <li><strong>Support Level</strong>: The key support price zone the stock recently tested (could be based on recent lows, trendlines, or the 20-day MA). This is the level from which the bounce originated.</li>
+        <li><strong>MA 20 day</strong>: The 20-day Simple Moving Average. Often acts as dynamic support in uptrends — many bounces occur right at or near this line.</li>
+        <li><strong>Distance from Support pct</strong>: How far the current price is above the identified support level, in percentage terms. Calculated as [(Current Price - Support Level) / Support Level] × 100. Positive values show the strength of the bounce.</li>
+        <li><strong>Today bounce pct</strong>: The percentage gain from the session's low (near support) to the current price, or the daily percentage change if it closed higher. Higher values indicate strong rejection of lower prices and aggressive buying.</li>
+    </ul>
+    
+    <h2>Tips for Picking Stocks for Strong Moves (2–12 Week Horizon)</h2>
+    
+    <p>
+        Support bounces are reliable setups for medium-term gains when confirmed by price action and volume. Focus on these key filters:
+    </p>
+    
+    <table>
+        <tr>
+            <th>Priority</th>
+            <th>What to Look For</th>
+            <th>Why It Matters</th>
+            <th>Typical Reward Potential</th>
+        </tr>
+        <tr>
+            <td>1 (Most Important)</td>
+            <td><strong>Today bounce pct ≥ +3–8%</strong> (ideally >5% from lows)</td>
+            <td>Shows strong buying conviction and rejection of support — the stronger the bounce, the higher the probability</td>
+            <td>12–40%+ in 4–12 weeks</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><strong>Distance from Support pct ≤ +4–10%</strong> (fresh bounce)</td>
+            <td>Early-stage bounces have the most room to run before resistance</td>
+            <td>Best risk/reward ratio</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Current Price near or above <strong>MA 20 day</strong></td>
+            <td>Confirms the 20-day MA is acting as support — a very bullish sign in uptrending stocks</td>
+            <td>Increases conviction for continuation</td>
+        </tr>
+        <tr>
+            <td>Avoid / Caution</td>
+            <td>Today bounce pct < +2% OR Distance from Support pct > +15–20%</td>
+            <td>Weak bounce = possible fakeout; too far already = limited upside left</td>
+            <td>Higher risk of pullback</td>
+        </tr>
+    </table>
+    
+    <p>
+        <strong>Power setup:</strong> Today bounce pct > 6% + Distance from Support pct < 8% + bounce off 20-day MA + high volume.<br>
+        These often lead to fast 15–50%+ moves in 2–12 weeks, especially in bull markets or strong sectors.<br>
+        <strong>Always:</strong> Confirm with volume spike, bullish candlestick (hammer, engulfing), stop-loss below support level, and prefer stocks in uptrends or recovering sectors.
+    </p>
+    
+    <h2>More Reading</h2>
+    <ul>
+        <li><a href="https://www.investopedia.com/terms/s/support.asp">Support and Resistance Basics - Investopedia</a></li>
+        <li><a href="https://stockcharts.com/school/doku.php?id=chart_school:chart_analysis:support_and_resistance">Support & Resistance Explained - StockCharts</a></li>
+        <li><a href="https://www.tradingview.com/education/support-resistance/">Support/Resistance Bounce Strategies - TradingView</a></li>
+        <li><a href="https://www.babypips.com/learn/forex/support-and-resistance">Bounce Trading from Support - BabyPips</a></li>
+    </ul>
+</body>
+</html>

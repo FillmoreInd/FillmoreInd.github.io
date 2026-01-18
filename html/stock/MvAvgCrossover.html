@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Average Crossover (Golden Cross Strategy)</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #333; }
+        ul { list-style-type: disc; padding-left: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Moving Average Crossover (Golden Cross Strategy)</h1>
+    
+    <p>
+        The Moving Average Crossover, often referred to as the Golden Cross Strategy, is a popular technical analysis tool used in stock trading. It identifies potential bullish trends by detecting when a shorter-term moving average (MA) crosses above a longer-term MA. This crossover signals increasing upward momentum, suggesting a possible shift from a bearish to a bullish market phase. In this report, we focus on shorter-term MAs (5-day, 20-day, and 50-day) for swing trading opportunities, which can help spot medium-term trends lasting days to months.
+    </p>
+    
+    <h2>Column Explanations</h2>
+    <p>
+        The report includes the following columns, each providing key data on moving averages and price positioning:
+    </p>
+    <ul>
+        <li><strong>ma-5 day</strong>: The 5-day Simple Moving Average (SMA), calculated as the average closing price over the last 5 trading days. This short-term MA is highly sensitive to recent price changes and is used to detect quick momentum shifts.</li>
+        <li><strong>ma-20 day</strong>: The 20-day Simple Moving Average (SMA), representing the average closing price over the last 20 trading days (about one month). It serves as an intermediate trend indicator and is often watched for early crossover signals with longer MAs.</li>
+        <li><strong>ma-50 day</strong>: The 50-day Simple Moving Average (SMA), based on the average closing price over the last 50 trading days (roughly 2-3 months). This is a key medium-term trend line; prices or shorter MAs crossing above it indicate strengthening bullish momentum.</li>
+        <li><strong>pct above ma-50 day</strong>: The percentage by which the current stock price is above (or below) the 50-day MA. Calculated as [(Current Price - 50-day MA) / 50-day MA] × 100. Positive values suggest an uptrend, while negative values indicate bearish pressure.</li>
+    </ul>
+    
+    <h2>Quick Profits in a 2-3 Month Window: What to Look For</h2>
+    <p>
+        If your goal is to identify stocks for quick returns of 8-10% within 2-3 months (a typical swing trading horizon), prioritize the following in the report:
+    </p>
+    <table>
+        <tr>
+            <th>Key Focus</th>
+            <th>What to Look For</th>
+            <th>Why It Matters</th>
+        </tr>
+        <tr>
+            <td><strong>pct above ma-50 day</strong></td>
+            <td>+2% to +10% (ideal range); up to +14-16% if other signals are strong</td>
+            <td>This range indicates fresh or established momentum with room for growth. Stocks just above the 50-day MA often deliver clean 8-20% moves in 6-12 weeks without being overextended.</td>
+        </tr>
+        <tr>
+            <td><strong>MA Stacking</strong></td>
+            <td>ma-5 day > ma-20 day > ma-50 day</td>
+            <td>Shows aligned bullish trends across timeframes, increasing the likelihood of sustained upward moves.</td>
+        </tr>
+        <tr>
+            <td><strong>Recent Crossovers</strong></td>
+            <td>ma-20 day recently crossed above ma-50 day (mini Golden Cross)</td>
+            <td>Signals the start of medium-term bullish momentum, perfect for 2-3 month trades.</td>
+        </tr>
+        <tr>
+            <td><strong>Avoid</strong></td>
+            <td>pct above ma-50 day > +18-20% or negative values</td>
+            <td>High values risk pullbacks; negative values suggest downtrends.</td>
+        </tr>
+    </table>
+    <p>
+        Combine these with high volume and sector strength for better results. This approach works best in trending markets—always use stop-losses to manage risk.
+    </p>
+    
+    <h2>More Reading</h2>
+    <ul>
+        <li><a href="https://www.investopedia.com/terms/g/goldencross.asp">Golden Cross Pattern Explained With Examples and Charts - Investopedia</a></li>
+        <li><a href="https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/golden-cross">Golden Cross - Overview, Example, Technical Indicators - Corporate Finance Institute</a></li>
+        <li><a href="https://trendspider.com/learning-center/moving-average-crossover-strategies">Moving Average Crossover Strategies: A Complete Guide - TrendSpider</a></li>
+        <li><a href="https://proptrader.oanda.com/en/lab-education/trading-knowledge/technical-analysis/how-moving-average-crossovers-help-identify-market-trends-and-signals">Moving Average Crossovers: Golden Cross, Death Cross Explained - OANDA</a></li>
+    </ul>
+</body>
+</html>

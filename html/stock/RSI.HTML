@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSI (Relative Strength Index) - Oversold/Overbought</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 20px; 
+            background-color: #f4f7f9; 
+            color: #333; 
+        }
+        h1 { 
+            color: #007bff; 
+            text-align: center; 
+            border-bottom: 2px solid #007bff; 
+            padding-bottom: 10px; 
+        }
+        h2 { 
+            color: #0056b3; 
+        }
+        ul { 
+            list-style-type: disc; 
+            padding-left: 20px; 
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin-bottom: 20px; 
+            background-color: #fff; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 12px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #007bff; 
+            color: white; 
+        }
+        .oversold { color: #28a745; font-weight: bold; } /* Green for oversold */
+        .overbought { color: #dc3545; font-weight: bold; } /* Red for overbought */
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>RSI (Relative Strength Index) - Oversold/Overbought</h1>
+    
+    <p>
+        The Relative Strength Index (RSI) is a momentum oscillator that measures the speed and change of price movements on a scale from 0 to 100. This report focuses on identifying <span class="oversold">oversold stocks (RSI &lt; 30)</span>, which may indicate that the stock has been sold off excessively and could be poised for a rebound or "bounce back." It's a popular tool for traders looking for potential reversal points in downtrends, especially in volatile markets. Note that RSI can also signal <span class="overbought">overbought conditions (RSI &gt; 70)</span>, but this screener emphasizes oversold opportunities.
+    </p>
+    
+    <h2>Column Explanations</h2>
+    <p>
+        The report includes the following columns to help you evaluate oversold stocks:
+    </p>
+    <ul>
+        <li><strong>Stock code</strong>: The ticker symbol or code for the stock (e.g., AAPL for Apple Inc.). This is the unique identifier used on exchanges.</li>
+        <li><strong>Last price</strong>: The most recent closing price of the stock. This gives you the current market value and helps assess affordability or potential upside.</li>
+        <li><strong>RSI_14 value</strong>: The RSI value calculated over a 14-period timeframe (typically 14 days, the standard setting). Lower values (below 30) suggest oversold conditions, while values above 70 indicate overbought.</li>
+    </ul>
+    
+    <h2>Tips for Picking Stocks for Returns in 1-3 Months</h2>
+    <p>
+        For aiming at returns (e.g., 8-15% or more) within a 1-3 month window, focus on deeply oversold stocks that show signs of reversal. Use the RSI_14 value as your primary filter, but combine with price action, volume, and market trends for better results. Here's a guide:
+    </p>
+    <table>
+        <tr>
+            <th>Key Focus</th>
+            <th>What to Look For in RSI_14</th>
+            <th>Why It Matters for 1-3 Months</th>
+        </tr>
+        <tr>
+            <td><strong>RSI_14 Value</strong></td>
+            <td>10-25 (deeply oversold); ideally &lt;20 for stronger bounces</td>
+            <td>Extremely low RSI often signals capitulation, leading to quick reversals. In 1-3 months, these can yield sharp recoveries as sentiment shifts.</td>
+        </tr>
+        <tr>
+            <td><strong>Avoid</strong></td>
+            <td>RSI_14 &gt;30 or persistently &lt;10 (extreme weakness)</td>
+            <td>Above 30 isn't oversold; below 10 might indicate a prolonged downtrend rather than a short-term bounce.</td>
+        </tr>
+        <tr>
+            <td><strong>Combine with Last Price</strong></td>
+            <td>Stocks with stable or rising price despite low RSI</td>
+            <td>Look for bullish divergence (price bottoms while RSI rises) for confirmation of a 1-3 month upswing.</td>
+        </tr>
+        <tr>
+            <td><strong>Additional Tips</strong></td>
+            <td>High volume on low RSI days; sector strength</td>
+            <td>Increases conviction for medium-term holds. Use stop-losses below recent lows to manage risk.</td>
+        </tr>
+    </table>
+    <p>
+        This strategy works best in bull or recovering markets—oversold RSI in bear markets can stay low longer. Always diversify and research fundamentals.
+    </p>
+    
+    <h2>More Reading</h2>
+    <ul>
+        <li><a href="https://www.investopedia.com/terms/r/rsi.asp">Relative Strength Index (RSI) - Investopedia</a></li>
+        <li><a href="https://corporatefinanceinstitute.com/resources/equities/relative-strength-index-rsi/">Relative Strength Index (RSI) - Corporate Finance Institute</a></li>
+        <li><a href="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/RSI">RSI Indicator Guide - Fidelity</a></li>
+        <li><a href="https://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:relative_strength_index_rsi">Relative Strength Index (RSI) - StockCharts</a></li>
+    </ul>
+</body>
+</html>
