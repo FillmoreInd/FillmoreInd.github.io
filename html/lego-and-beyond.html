@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World of Lego's and Beyond</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF8E7;
+    --paper:#FFFDF6;
+    --ink:#1B1B1B;
+    --ink-soft:#4A4438;
+    --red:#E3000B;
+    --red-dark:#A80008;
+    --yellow:#FFD500;
+    --yellow-dark:#C79A00;
+    --blue:#0055BF;
+    --blue-dark:#003C87;
+    --green:#237841;
+    --green-dark:#155A2E;
+    --orange:#FF8200;
+    --orange-dark:#C46200;
+    --azure:#0AA5D6;
+    --azure-dark:#067496;
+    --purple:#7B2D8E;
+    --radius:18px;
+    --shadow: 0 10px 0 rgba(0,0,0,0.08);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Nunito', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+  }
+  h1,h2,h3,h4{
+    font-family:'Baloo 2', cursive;
+    margin:0 0 .5rem 0;
+    line-height:1.15;
+  }
+  p{margin:0 0 1rem 0;}
+  a{color:inherit;}
+  img{max-width:100%;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Baloo 2', cursive;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-size:.78rem;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+
+  /* --- stud helpers --- */
+  .stud-row{
+    display:flex;
+    gap:10px;
+  }
+  .stud{
+    width:20px;height:20px;border-radius:50%;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35);
+  }
+
+  /* ---------------- NAV ---------------- */
+  .navbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);
+    border-bottom:6px solid var(--yellow);
+  }
+  .nav-inner{
+    max-width:1100px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    height:66px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:10px;
+    font-family:'Baloo 2', cursive;
+    font-weight:800;color:#fff;font-size:1.15rem;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .brand .logo-brick{
+    display:inline-flex;gap:3px;
+    background:var(--red);
+    padding:6px 7px 9px 7px;
+    border-radius:6px;
+    position:relative;
+  }
+  .brand .logo-brick .stud{width:9px;height:9px;background:var(--red);box-shadow:none;}
+  .brand .logo-brick .stud::after{content:"";display:block;width:9px;height:9px;border-radius:50%;background:#ff5c5c;transform:translateY(-9px);opacity:.55;}
+  nav.links{display:flex;gap:4px;flex-wrap:wrap;}
+  nav.links a{
+    color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;
+    padding:8px 12px;border-radius:10px;transition:background .15s;
+    font-family:'Nunito',sans-serif;
+  }
+  nav.links a:hover{background:rgba(255,255,255,0.12);}
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    position:relative;
+    background:var(--blue);
+    color:#fff;
+    overflow:hidden;
+    padding:90px 0 70px;
+    background-image:
+      radial-gradient(circle at 6px 6px, rgba(255,255,255,0.16) 5px, transparent 6px);
+    background-size:38px 38px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,60,135,0) 0%, rgba(0,60,135,0.55) 100%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;text-align:center;}
+  .hero h1{
+    font-size:clamp(2.3rem, 6vw, 4rem);
+    color:#fff;
+    text-shadow:0 5px 0 rgba(0,0,0,0.18);
+    margin-bottom:16px;
+  }
+  .hero h1 .hl{color:var(--yellow);}
+  .hero p.lede{
+    font-size:1.15rem;
+    max-width:640px;
+    margin:0 auto 30px;
+    color:#EAF3FF;
+    font-weight:600;
+  }
+  .brick-strip{
+    display:flex;justify-content:center;gap:14px;margin-top:8px;flex-wrap:wrap;
+  }
+  .mini-brick{
+    width:56px;height:34px;border-radius:6px;
+    position:relative;
+    box-shadow:0 6px 0 rgba(0,0,0,0.18);
+  }
+  .mini-brick .stud-row{position:absolute;top:-9px;left:0;right:0;justify-content:center;gap:6px;}
+  .mini-brick .stud{width:12px;height:12px;}
+  .hero-anchors{
+    margin-top:34px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Baloo 2',cursive;font-weight:700;
+    padding:12px 22px;border-radius:12px;
+    text-decoration:none;
+    border:none;cursor:pointer;
+    box-shadow:0 5px 0 rgba(0,0,0,0.22);
+    transition:transform .1s, box-shadow .1s;
+    font-size:1rem;
+  }
+  .btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,0.22);}
+  .btn-yellow{background:var(--yellow);color:#3a2b00;}
+  .btn-white{background:#fff;color:var(--blue-dark);}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.7);box-shadow:none;}
+
+  /* ---------------- SECTION SHELL ---------------- */
+  section{padding:72px 0;}
+  .section-head{max-width:680px;margin:0 auto 42px;text-align:center;}
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);}
+  .section-head p{color:var(--ink-soft);font-size:1.05rem;}
+
+  .eyebrow-red{background:#FFE0E0;color:var(--red-dark);}
+  .eyebrow-blue{background:#DCEBFF;color:var(--blue-dark);}
+  .eyebrow-green{background:#DCF3E3;color:var(--green-dark);}
+  .eyebrow-yellow{background:#FFF3C4;color:#7a5c00;}
+
+  /* ---------------- INTRO ---------------- */
+  .intro{background:var(--paper);}
+  .intro-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+  }
+  .intro-card{
+    background:#fff;border-radius:var(--radius);padding:28px 30px;
+    box-shadow:var(--shadow);border:3px solid var(--ink);
+  }
+  .fact-row{display:flex;gap:14px;margin-bottom:16px;}
+  .fact-row:last-child{margin-bottom:0;}
+  .fact-dot{
+    flex:0 0 40px;height:40px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Baloo 2',cursive;font-weight:800;color:#fff;font-size:1.1rem;
+  }
+  .fact-text h4{font-size:1.02rem;margin-bottom:2px;}
+  .fact-text p{color:var(--ink-soft);font-size:.94rem;margin:0;}
+
+  .stack-illustration{
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+  }
+  .stack-brick{
+    width:220px;height:56px;border-radius:8px;position:relative;
+    box-shadow:0 7px 0 rgba(0,0,0,0.18);
+  }
+  .stack-brick .stud-row{position:absolute;top:-11px;left:0;right:0;justify-content:center;gap:14px;}
+  .stack-brick .stud{width:15px;height:15px;}
+
+  /* ---------------- BEYOND GRID ---------------- */
+  .beyond{background:var(--cream);}
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    gap:26px;
+  }
+  .brick-card{
+    background:#fff;
+    border-radius:var(--radius);
+    border:3px solid var(--ink);
+    box-shadow:var(--shadow);
+    overflow:visible;
+    padding-top:22px;
+    position:relative;
+    display:flex;flex-direction:column;
+  }
+  .brick-card .stud-row{
+    position:absolute;top:-13px;left:24px;gap:10px;
+  }
+  .brick-card .stud{width:22px;height:22px;border:3px solid var(--ink);}
+  .card-top{padding:6px 26px 0;}
+  .card-top .tag{
+    display:inline-block;font-family:'Baloo 2',cursive;font-weight:700;
+    font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+    padding:4px 10px;border-radius:8px;margin-bottom:10px;color:#fff;
+  }
+  .card-top h3{font-size:1.28rem;margin-bottom:8px;}
+  .card-body{padding:0 26px 22px;flex:1;display:flex;flex-direction:column;}
+  .card-body p{color:var(--ink-soft);font-size:.95rem;flex:1;}
+  .card-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;}
+  .pill-link{
+    font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;
+    padding:8px 14px;border-radius:10px;text-decoration:none;
+    border:2px solid var(--ink);
+  }
+  .pill-solid{color:#fff;}
+  .pill-ghost{background:#fff;color:var(--ink);}
+
+  /* ---------------- REBRICKABLE ---------------- */
+  .rebrickable{
+    background:var(--green);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    background-image:radial-gradient(circle at 6px 6px, rgba(255,255,255,0.10) 5px, transparent 6px);
+    background-size:34px 34px;
+  }
+  .rebrickable .section-head p{color:#DFF3E4;}
+  .rebrickable .section-head h2{color:#fff;}
+  .re-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+  }
+  .re-card{
+    background:#fff;color:var(--ink);
+    border-radius:var(--radius);padding:26px 28px;
+    box-shadow:0 10px 0 rgba(0,0,0,0.20);
+  }
+  .re-card h3{color:var(--green-dark);}
+  .steps{list-style:none;margin:0;padding:0;}
+  .steps li{
+    display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;
+  }
+  .steps li:last-child{margin-bottom:0;}
+  .step-num{
+    flex:0 0 30px;height:30px;border-radius:50%;
+    background:var(--yellow);color:#4a3600;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Baloo 2',cursive;font-weight:800;font-size:.95rem;
+  }
+  .steps p{margin:0;color:var(--ink-soft);font-size:.94rem;}
+  .steps strong{color:var(--ink);}
+  .re-note{
+    background:rgba(255,255,255,0.14);
+    border:2px dashed rgba(255,255,255,0.5);
+    border-radius:14px;padding:16px 18px;font-size:.92rem;margin-top:22px;
+  }
+
+  /* ---------------- GLOSSARY ---------------- */
+  .glossary{background:var(--paper);}
+  .gloss-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  .gloss-item{
+    background:#fff;border:3px solid var(--ink);border-radius:14px;overflow:hidden;
+  }
+  .gloss-q{
+    width:100%;text-align:left;background:none;border:none;cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:16px 20px;font-family:'Baloo 2',cursive;font-weight:700;font-size:1.05rem;
+    color:var(--ink);
+  }
+  .gloss-q .term-tag{
+    font-family:'Nunito',sans-serif;font-weight:800;font-size:.7rem;
+    color:#fff;padding:3px 9px;border-radius:7px;margin-right:10px;
+    text-transform:uppercase;letter-spacing:.03em;
+  }
+  .gloss-q .chev{
+    font-size:1.2rem;transition:transform .2s;flex:0 0 auto;
+  }
+  .gloss-item.open .chev{transform:rotate(45deg);}
+  .gloss-a{
+    max-height:0;overflow:hidden;transition:max-height .25s ease;
+  }
+  .gloss-a-inner{padding:0 20px 18px 20px;color:var(--ink-soft);font-size:.95rem;}
+
+  /* ---------------- FOOTER ---------------- */
+  footer{
+    background:var(--ink);color:#e8e4d8;padding:44px 0 30px;
+  }
+  .footer-inner{
+    display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+    align-items:flex-start;
+  }
+  footer .brand{margin-bottom:10px;}
+  footer p{color:#b6b0a0;font-size:.85rem;max-width:520px;margin:0 0 6px;}
+  footer .foot-links{display:flex;gap:18px;flex-wrap:wrap;}
+  footer .foot-links a{color:#e8e4d8;text-decoration:none;font-weight:700;font-size:.9rem;}
+  footer .foot-links a:hover{color:var(--yellow);}
+
+  @media (max-width: 860px){
+    .intro-grid, .re-grid{grid-template-columns:1fr;}
+    nav.links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="logo-brick">
+        <span class="stud"></span><span class="stud"></span>
+      </span>
+      Lego's &amp; Beyond
+    </a>
+    <nav class="links">
+      <a href="#rebrickable">Rebrickable</a>
+      <a href="#intro">Intro</a>
+      <a href="#beyond">Lego &amp; Beyond</a>
+      <a href="#glossary">Glossary</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap hero-inner">
+    <h1>The world of <span class="hl">Lego's</span> and <span class="hl">Beyond</span></h1>
+    <p class="lede">A friendly one-stop guide to the classic brick, the marketplaces that trade it, and the compatible-brick makers building right alongside it.</p>
+    <div class="brick-strip" aria-hidden="true">
+      <div class="mini-brick" style="background:var(--red);">
+        <div class="stud-row"><span class="stud" style="background:var(--red);"></span><span class="stud" style="background:var(--red);"></span></div>
+      </div>
+      <div class="mini-brick" style="background:var(--yellow);">
+        <div class="stud-row"><span class="stud" style="background:var(--yellow);"></span><span class="stud" style="background:var(--yellow);"></span></div>
+      </div>
+      <div class="mini-brick" style="background:var(--azure);">
+        <div class="stud-row"><span class="stud" style="background:var(--azure);"></span><span class="stud" style="background:var(--azure);"></span></div>
+      </div>
+      <div class="mini-brick" style="background:var(--green);">
+        <div class="stud-row"><span class="stud" style="background:var(--green);"></span><span class="stud" style="background:var(--green);"></span></div>
+      </div>
+      <div class="mini-brick" style="background:var(--orange);">
+        <div class="stud-row"><span class="stud" style="background:var(--orange);"></span><span class="stud" style="background:var(--orange);"></span></div>
+      </div>
+    </div>
+    <div class="hero-anchors">
+      <a href="#beyond" class="btn btn-yellow">Browse marketplaces</a>
+      <a href="#glossary" class="btn btn-outline">Learn the lingo</a>
+    </div>
+  </div>
+</header>
+
+<section class="rebrickable" id="rebrickable">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow eyebrow-yellow">Spotlight</span>
+      <h2>Rebrickable: build from what you already own, or buy someone else's design</h2>
+      <p>The go-to hub for MOCs &mdash; fan-designed models with full instructions and parts lists.</p>
+    </div>
+    <div class="re-card" style="margin-bottom:32px;">
+      <h3>What is Rebrickable?</h3>
+      <p>Rebrickable is a site that gives you models (both official Lego sets and fan-made designs) along with the exact list of bricks needed to build them. It doesn't sell physical bricks itself &mdash; instead it's tied in with sourcing marketplaces and sub-suppliers (like BrickLink and Brick Owl) who can pull the individual parts from manufacturers and sellers and get them shipped to your region.</p>
+      <div class="card-links">
+        <a class="pill-link pill-solid" style="background:var(--green);" href="https://rebrickable.com/sets/" target="_blank" rel="noopener">Find LEGO Sets | Rebrickable - Build with LEGO</a>
+      </div>
+    </div>
+    <div class="re-grid">
+      <div class="re-card">
+        <h3>What makes it different</h3>
+        <p>Rebrickable is built around one clever idea: tell it what sets or loose parts you already own, and it will show you every official set and fan-made MOC you could build with them &mdash; plus exactly which extra parts you'd need to finish the job. With well over 100,000 MOCs submitted by designers worldwide, it's the largest dedicated library of custom Lego-compatible designs on the web.</p>
+        <p>Many designers sell their MOCs as "Premium" downloads: a small fee gets you a polished instruction booklet and complete parts list for a model you won't find in any official Lego set. Because you're only paying for the design rather than a boxed retail product, working this way &mdash; instructions from Rebrickable, parts sourced from BrickLink, Brick Owl, or a compatible-brick store &mdash; often comes out noticeably cheaper than buying a comparable official set, especially for large or retired designs.</p>
+      </div>
+      <div class="re-card">
+        <h3>How people typically use it</h3>
+        <ol class="steps">
+          <li>
+            <div class="step-num">1</div>
+            <p><strong>Log your collection.</strong> Add the sets and loose parts you already have.</p>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <p><strong>Browse buildable designs.</strong> See official sets and fan MOCs you can build right now, or almost can.</p>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <p><strong>Get the instructions.</strong> Free MOCs download directly; Premium MOCs are a one-time purchase for the digital plans.</p>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <p><strong>Source any missing parts.</strong> Rebrickable links out to marketplaces like BrickLink and Brick Owl to fill the gaps.</p>
+          </li>
+        </ol>
+        <div class="re-note">Good to know: Rebrickable itself sells the digital building instructions, not physical bricks. You'll still buy the actual parts from a parts marketplace &mdash; which is exactly what keeps the total cost down.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <span class="eyebrow eyebrow-blue">Getting started</span>
+      <h2>What exactly are Lego building blocks?</h2>
+      <p>Lego bricks are small, interlocking plastic pieces that click together using a simple system of studs on top and tubes underneath. That "clutch power" is what lets a handful of bricks become almost anything: a house, a spaceship, a working crane. First produced by the Danish company The Lego Group in the late 1940s and refined into the modern stud-and-tube system in 1958, the brick has barely changed since &mdash; which is exactly why a piece bought decades ago still fits a piece bought today.</p>
+      <p>Because the design has stayed so consistent, a whole ecosystem has grown up around it: places to buy individual parts, marketplaces to resell retired sets, and independent manufacturers making bricks that click together just as well, often for a lot less money. The rest of this page is a guide to that wider world.</p>
+    </div>
+    <div>
+      <div class="intro-card">
+        <div class="fact-row">
+          <div class="fact-dot" style="background:var(--red);">1</div>
+          <div class="fact-text">
+            <h4>One system, endless parts</h4>
+            <p>Every stud is the same size, so pieces from any era &mdash; and increasingly, from other brands &mdash; can be mixed in the same build.</p>
+          </div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-dot" style="background:var(--blue);">2</div>
+          <div class="fact-text">
+            <h4>A collector's economy</h4>
+            <p>Retired sets and rare parts are actively bought, sold and traded on dedicated marketplaces, much like a stamp or coin community.</p>
+          </div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-dot" style="background:var(--green);">3</div>
+          <div class="fact-text">
+            <h4>A builder's community</h4>
+            <p>Fans design their own original models &mdash; called MOCs &mdash; and share or sell the instructions for anyone to build.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beyond" id="beyond">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow eyebrow-red">Lego and beyond</span>
+      <h2>Where to buy parts, sets, and compatible bricks</h2>
+      <p>A mix of official-parts marketplaces and independent, Lego-compatible brick makers. All of these sites are third parties and are not affiliated with The Lego Group.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <!-- Brick Owl -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--red);"></span><span class="stud" style="background:var(--red);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--red);">Genuine parts marketplace</span>
+          <h3>Brick Owl</h3>
+        </div>
+        <div class="card-body">
+          <p>Brick Owl is an independent online marketplace for buying and selling genuine Lego parts, minifigures and sets. Started in 2013 by two lifelong Lego fans, it now hosts thousands of individual seller storefronts, letting you compare prices and combine orders across stores. Vendors on Brick Owl operate out of many different countries, so while the marketplace aims to serve buyers worldwide, exact availability can vary a little depending on where a seller is based and what they're able to ship internationally.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--red);" href="https://www.brickowl.com/" target="_blank" rel="noopener">Visit Brick Owl</a>
+            <a class="pill-link pill-ghost" href="https://www.brickowl.com/catalog" target="_blank" rel="noopener">Browse the catalogue</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- BrickLink -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--blue);"></span><span class="stud" style="background:var(--blue);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--blue);">Genuine parts marketplace</span>
+          <h3>BrickLink</h3>
+        </div>
+        <div class="card-body">
+          <p>Founded in 2000, BrickLink is the largest resale marketplace for genuine Lego, now owned by The Lego Group itself. It's known for its enormous parts catalogue, a "Wanted List" tool for tracking down every last piece for a project, and active community forums. It's a great first stop for rare or retired parts &mdash; just note that BrickLink has scaled back buying and selling privileges in a number of countries, so it's worth checking availability in your region before you start hunting.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--blue);" href="https://www.bricklink.com/" target="_blank" rel="noopener">Visit BrickLink</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Webrick -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--azure);"></span><span class="stud" style="background:var(--azure);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--azure);">Compatible bricks</span>
+          <h3>Webrick</h3>
+        </div>
+        <div class="card-body">
+          <p>Webrick sells Lego-compatible bricks and parts &mdash; unbranded pieces built to the same stud-and-tube system, often at a noticeably lower price. It's popular with builders working on large custom projects (MOCs), thanks to a handy tool that lets you upload a parts list exported from design software and get a ready-to-order match. It also carries parts from respected third-party brands, including some colours official Lego doesn't offer.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--azure);" href="https://www.webrick.com/" target="_blank" rel="noopener">Visit Webrick</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Wobrick -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--green);"></span><span class="stud" style="background:var(--green);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--green);">Compatible bricks</span>
+          <h3>Wobrick</h3>
+        </div>
+        <div class="card-body">
+          <p>Wobrick is a dedicated shop for Gobricks-branded pieces, one of the better-regarded Lego-compatible brick makers. Beyond loose parts, it specialises in turning a builder's own MOC design into a ready-to-build kit &mdash; send over your parts list and it'll quote you a complete, boxed set of the exact bricks you need.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--green);" href="https://wobrick.com/" target="_blank" rel="noopener">Visit Wobrick</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- BlueBrixx -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--orange);"></span><span class="stud" style="background:var(--orange);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--orange);">Compatible sets</span>
+          <h3>BlueBrixx</h3>
+        </div>
+        <div class="card-body">
+          <p>BlueBrixx is a German brand, founded in 2018, that designs and sells its own Lego-compatible building sets &mdash; everything from architecture and trains to licensed vehicle models &mdash; usually at a friendlier price than an equivalent official set. It combines original in-house designs with collaborations from established Chinese manufacturers, and even runs a number of physical retail stores across Germany.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--orange);" href="https://www.bluebrixx.com" target="_blank" rel="noopener">Visit BlueBrixx</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- YourWobb -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--purple);"></span><span class="stud" style="background:var(--purple);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--purple);">Compatible bricks</span>
+          <h3>YourWobb (YWOBB)</h3>
+        </div>
+        <div class="card-body">
+          <p>YourWobb, also known as YWOBB, is a Shanghai-based store selling a wide range of Chinese-brand, Lego-compatible bricks, sets and MOC kits, shipped worldwide. It stocks parts from many well-known compatible-brick manufacturers side by side, and is often used by builders looking to fill out a large or unusual parts list at a lower cost than buying official Lego pieces individually.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--purple);" href="https://www.yourwobb.com/" target="_blank" rel="noopener">Visit YourWobb</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Brick Me Up Scottie -->
+      <article class="brick-card">
+        <div class="stud-row" aria-hidden="true"><span class="stud" style="background:var(--red-dark);"></span><span class="stud" style="background:var(--red-dark);"></span></div>
+        <div class="card-top">
+          <span class="tag" style="background:var(--red-dark);">Community shop</span>
+          <h3>Brick Me Up Scottie</h3>
+        </div>
+        <div class="card-body">
+          <p>Brick Me Up Scottie grew out of a fan community around set reviews and hobby builds, and has expanded into a small shop selling Lego-compatible sets, accessories and loose parts. Its collections lean into fun, curated themes &mdash; architecture, modular city buildings and more &mdash; making it a nice browse for inspiration as much as a place to shop.</p>
+          <div class="card-links">
+            <a class="pill-link pill-solid" style="background:var(--red-dark);" href="https://www.brickmeupscottie.com/" target="_blank" rel="noopener">Visit Brick Me Up Scottie</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="glossary" id="glossary">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow eyebrow-green">Speak like a builder</span>
+      <h2>A quick glossary</h2>
+      <p>A few terms you'll run into constantly across these sites and forums.</p>
+    </div>
+
+    <div class="gloss-list" id="gloss-list">
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--red);">Term</span>MOC</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">Short for "My Own Creation." Any original model designed by a fan rather than released as an official Lego set. MOCs range from small vehicles to enormous, multi-thousand-piece builds, and are usually shared with full instructions and a parts list, like the ones found on Rebrickable.</div></div>
+      </div>
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--blue);">Term</span>AFOL</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">"Adult Fan of Lego." The community's term for grown-up hobbyists who collect, build and trade well beyond childhood &mdash; the core audience for most of the marketplaces and compatible-brick makers on this page.</div></div>
+      </div>
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--green);">Term</span>Clutch power</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">The grip strength between two connected bricks &mdash; strong enough to hold a build together, loose enough to pull apart by hand. It's the single most important quality benchmark when comparing genuine Lego to compatible alternatives.</div></div>
+      </div>
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--orange);">Term</span>PAB (Pick a Brick)</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">Lego's own service for buying individual loose parts rather than a boxed set, useful for topping up a collection or sourcing pieces for a MOC. Independent marketplaces like BrickLink and Brick Owl serve a similar purpose, often with a far larger and more specialised selection.</div></div>
+      </div>
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--purple);">Term</span>SNOT</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">"Studs Not On Top." A building technique where bricks are angled or turned so their studs face sideways or downward, used to create smoother, more realistic surfaces &mdash; common in detailed MOCs.</div></div>
+      </div>
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--azure);">Term</span>Wanted list</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">A saved list of specific parts, colours and quantities you need, supported by marketplaces like BrickLink. Sellers can match against it directly, making it much faster to complete a large or unusual parts order.</div></div>
+      </div>
+
+      <div class="gloss-item">
+        <button class="gloss-q">
+          <span><span class="term-tag" style="background:var(--red-dark);">Term</span>TLG</span>
+          <span class="chev">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner">Shorthand for "The Lego Group," the Danish company that owns the Lego trademark and manufactures official sets. None of the independent sites listed on this page are operated by TLG.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <a href="#top" class="brand">
+        <span class="logo-brick"><span class="stud"></span><span class="stud"></span></span>
+        Lego's &amp; Beyond
+      </a>
+      <p>An independent fan-made guide. Not affiliated with, endorsed by, or sponsored by The Lego Group. LEGO&reg; is a trademark of The Lego Group, which does not sponsor this page. All other site and brand names belong to their respective owners.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#rebrickable">Rebrickable</a>
+      <a href="#intro">Intro</a>
+      <a href="#beyond">Lego &amp; Beyond</a>
+      <a href="#glossary">Glossary</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.gloss-item').forEach(function(item){
+    var btn = item.querySelector('.gloss-q');
+    var panel = item.querySelector('.gloss-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.gloss-item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.gloss-a').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        panel.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
